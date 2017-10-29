@@ -1,0 +1,64 @@
+.best {
+  background: url('https://codeman23.github.io/mburger/img/best_bg.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    display: block;
+    font-size: 68px;
+    margin-bottom: 134px;
+    letter-spacing: 2px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+  }
+
+}
+
+.content-item {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  padding:0 16px;
+  text-align: center;
+
+  &__icon {
+    font-family: svgfont_1regular, sans-serif;
+    font-size: 100px;
+    width: 100%;
+    height: 64px;
+    margin-bottom: 22px;
+    color: $red;
+  }
+
+  &__title {
+    font-family: lifehackmedium,sans-serif;
+    font-size: 24px;
+    margin-bottom: 15px;
+    line-height: 29px;
+    letter-spacing: -0.6px;
+    margin-left: -5px;
+  }
+
+
+  &__icon_two {
+    font-size: 90px;
+    margin-top:-5px;
+    height: 69px;
+    color: $yellow;
+  }
+
+  &__icon_three {
+    @extend .content-item__icon_two;
+    color: $green;
+  }
+
+  &__title_three {
+    margin-bottom: 5px;
+  }
+
+}

@@ -1,0 +1,29 @@
+@mixin button($background:#e45028) {
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-family: ubuntu-medium, sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #fff;
+  border: 0;
+  background: $background;
+  transition: background .5s ease-in-out;
+  text-decoration: none;
+
+  &:hover {
+    background: darken( $background, 15% );
+  }
+}
+
+@mixin circle ($width, $color) {
+  width: $width;
+  height: $width;
+  border-radius: $width/2;
+  background: $color;
+}
+
+//responsive
+@function rem($px) {
+  @return $px / 14px+0rem;
+}

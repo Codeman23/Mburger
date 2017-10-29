@@ -1,0 +1,187 @@
+.pages {
+  display: block;
+  position: fixed;
+  right: 57px;
+  top: 94px;
+  z-index: 2;
+
+  &__point {
+    width: 6px;
+    height: 6px;
+    background: $white;
+    display: block;
+    border-radius: 50%;
+    margin-bottom: 15.4px;
+    cursor: pointer;
+    position: relative;
+
+    &_active:before {
+      position: absolute;
+      content: '';
+      width: 14px;
+      height: 14px;
+      border: 1px solid $white;
+      border-radius: 50%;
+      transform: translateX(-30%) translateY(-30%);
+    }
+  }
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  //position: absolute;
+  //left: 50%;
+  //transform: translateX(-50%) translateY(0);
+  //min-width: 940px;
+}
+
+.header__logo {
+  margin-right:auto;
+
+}
+
+.logo-svg {
+  width: 91px;
+  height: 69px;
+  display: block;
+  margin-top: 11px;
+
+}
+
+
+.navigation {
+  margin-right: rem(16px);
+  margin-top: 4px;
+
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    &:nth-child(-n+5):after {
+      display: inline-block;
+      content: '';
+      @include circle(4px, $white);
+      vertical-align: middle;
+      margin: 0 12.4px;
+    }
+
+  }
+
+  &__item:last-child{
+    //padding-right:2px;
+  }
+
+  &__link {
+    color: $white;
+    text-decoration: none;
+    transition: .5s;
+    font-family: ubuntu-medium, sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    line-height: 1.42;
+    display: inline-block;
+    vertical-align: middle;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+  }
+
+}
+
+.button {
+  @include button();
+}
+
+.header__btn {
+  padding: 0;
+  margin: 7px -3px 0 0;
+}
+
+
+.first {
+  background-image: url('https://codeman23.github.io/mburger/img/first_bg.jpg');
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  position: relative;
+
+  &__container {
+    height: 100%;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+
+  }
+
+
+  &__info {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow:1;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 93px;
+
+  }
+
+  &__desc {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__photo {
+    width: 454px;
+    height: 426px;
+    padding-left: 16px;
+    //margin: 0 0 0 -25px;
+    //margin-right: 20px;
+
+  }
+
+  &__title  {
+    font-size: 72px;
+    color: $yellow;
+    display: inline-block;
+    line-height: 1.7  ;
+    margin-left: 13px;
+    padding-top: 46px;
+  }
+
+  &__text {
+    font-size: 65px;
+    font-family: lifehackmedium,sans-serif;
+    color: $white;
+    line-height: 58px;
+    letter-spacing: -1.6px;
+    margin-left: 13px;
+  }
+
+  &__scroll {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__scroll-icon {
+    font-family: svgfont_1regular, sans-serif;
+    color: $white;
+    font-size: 28px;
+    display: block;
+    margin-left: 7px;
+    cursor: pointer;
+  }
+
+}
+.first__photo, .first__desc {
+  flex-basis: 50%;
+  display: flex;
+}
+

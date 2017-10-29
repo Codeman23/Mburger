@@ -1,0 +1,497 @@
+@font-face {
+  font-family: 'gagalinregular';
+  src: url("../fonts/gagalin-regular-webfont.woff2") format("woff2"), url("../fonts/gagalin-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'lifehackmedium';
+  src: url("../fonts/lifehack_medium-webfont.woff2") format("woff2"), url("../fonts/lifehack_medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'svgfont_1regular';
+  src: url("../fonts/icons_font-webfont.woff2") format("woff2"), url("../fonts/icons_font-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ubuntu-bold';
+  src: url("../fonts/ubuntubold.woff2") format("woff2"), url("../fonts/ubuntubold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ubuntu-medium';
+  src: url("../fonts/ubuntumedium.woff2") format("woff2"), url("../fonts/ubuntumedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ubuntu';
+  src: url("../fonts/ubuntu.woff2") format("woff2"), url("../fonts/ubuntu.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ubuntu-light';
+  src: url("../fonts/ubuntulight.woff2") format("woff2"), url("../fonts/ubuntulight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+body, html {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: ubuntu-light, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+ul {
+  padding: 0;
+  margin: 0; }
+
+ul li {
+  list-style-type: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-family: gagalinregular, sans-serif;
+  font-weight: normal; }
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.visuallyhidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden; }
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  position: relative; }
+
+.main-content {
+  height: 100%;
+  min-height: 650px; }
+
+.container {
+  width: 940px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0 auto; }
+
+.section {
+  height: 100%;
+  background-color: #000;
+  min-width: 940px;
+  min-height: 650px; }
+
+.pages {
+  display: block;
+  position: fixed;
+  right: 57px;
+  top: 94px;
+  z-index: 2; }
+  .pages__point {
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    display: block;
+    border-radius: 50%;
+    margin-bottom: 15.4px;
+    cursor: pointer;
+    position: relative; }
+    .pages__point_active:before {
+      position: absolute;
+      content: '';
+      width: 14px;
+      height: 14px;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      -webkit-transform: translateX(-30%) translateY(-30%);
+      -ms-transform: translateX(-30%) translateY(-30%);
+      transform: translateX(-30%) translateY(-30%); }
+
+.header {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.header__logo {
+  margin-right: auto; }
+
+.logo-svg {
+  width: 91px;
+  height: 69px;
+  display: block;
+  margin-top: 11px; }
+
+.navigation {
+  margin-right: 1.14286rem;
+  margin-top: 4px; }
+  .navigation__item {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap; }
+    .navigation__item:nth-child(-n+5):after {
+      display: inline-block;
+      content: '';
+      width: 4px;
+      height: 4px;
+      border-radius: 2px;
+      background: #fff;
+      vertical-align: middle;
+      margin: 0 12.4px; }
+  .navigation__link {
+    color: #fff;
+    text-decoration: none;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    font-family: ubuntu-medium, sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    line-height: 1.42;
+    display: inline-block;
+    vertical-align: middle; }
+    .navigation__link:hover {
+      text-decoration: underline; }
+
+.button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-family: ubuntu-medium, sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #fff;
+  border: 0;
+  background: #e45028;
+  -webkit-transition: background .5s ease-in-out;
+  -o-transition: background .5s ease-in-out;
+  transition: background .5s ease-in-out;
+  text-decoration: none; }
+  .button:hover {
+    background: #aa3515; }
+
+.header__btn {
+  padding: 0;
+  margin: 7px -3px 0 0; }
+
+.first {
+  background-image: url("https://codeman23.github.io/mburger/img/first_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  position: relative; }
+  .first__container {
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .first__info {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 93px; }
+  .first__desc {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .first__photo {
+    width: 454px;
+    height: 426px;
+    padding-left: 16px; }
+  .first__title {
+    font-size: 72px;
+    color: #f9b43b;
+    display: inline-block;
+    line-height: 1.7;
+    margin-left: 13px;
+    padding-top: 46px; }
+  .first__text {
+    font-size: 65px;
+    font-family: lifehackmedium,sans-serif;
+    color: #fff;
+    line-height: 58px;
+    letter-spacing: -1.6px;
+    margin-left: 13px; }
+  .first__scroll {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .first__scroll-icon {
+    font-family: svgfont_1regular, sans-serif;
+    color: #fff;
+    font-size: 28px;
+    display: block;
+    margin-left: 7px;
+    cursor: pointer; }
+
+.first__photo, .first__desc {
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.best {
+  background: url("https://codeman23.github.io/mburger/img/best_bg.jpg") no-repeat center center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .best__title {
+    display: block;
+    font-size: 68px;
+    margin-bottom: 134px;
+    letter-spacing: 2px; }
+  .best__content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+
+.content-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 320px;
+  padding: 0 16px;
+  text-align: center; }
+  .content-item__icon {
+    font-family: svgfont_1regular, sans-serif;
+    font-size: 100px;
+    width: 100%;
+    height: 64px;
+    margin-bottom: 22px;
+    color: #e45028; }
+  .content-item__title {
+    font-family: lifehackmedium,sans-serif;
+    font-size: 24px;
+    margin-bottom: 15px;
+    line-height: 29px;
+    letter-spacing: -0.6px;
+    margin-left: -5px; }
+  .content-item__icon_two, .content-item__icon_three {
+    font-size: 90px;
+    margin-top: -5px;
+    height: 69px;
+    color: #f9b43b; }
+  .content-item__icon_three {
+    color: #8ac03e; }
+  .content-item__title_three {
+    margin-bottom: 5px; }
+
+.reviews {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .reviews__item {
+    position: relative;
+    overflow: hidden;
+    width: 25%;
+    height: 50%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #111111; }
+    .reviews__item:hover .reviews__photo {
+      opacity: .2; }
+    .reviews__item:hover .reviews__desc {
+      opacity: 1; }
+  .reviews__photo {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    z-index: 0;
+    -webkit-transition: opacity .5s ease;
+    -o-transition: opacity .5s ease;
+    transition: opacity .5s ease;
+    -webkit-filter: grayscale(100%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%); }
+  .reviews__desc {
+    width: 240px;
+    height: 232px;
+    text-align: left;
+    left: 0;
+    top: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    opacity: 0;
+    z-index: 1;
+    -webkit-transition: opacity .5s ease;
+    -o-transition: opacity .5s ease;
+    transition: opacity .5s ease; }
+  .reviews__title {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #fff;
+    margin-bottom: 3px; }
+  .reviews__text {
+    color: #fff; }
+  .reviews__button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-family: ubuntu-medium, sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+    border: 0;
+    background: #2f3234;
+    -webkit-transition: background .5s ease-in-out;
+    -o-transition: background .5s ease-in-out;
+    transition: background .5s ease-in-out;
+    text-decoration: none;
+    margin-bottom: 2px; }
+    .reviews__button:hover {
+      background: #0b0b0c; }
