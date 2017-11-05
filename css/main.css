@@ -713,12 +713,9 @@ body, html {
     background: #0b0b0c; }
 
 .contacts {
-  background: #d6d6d6;
-  position: relative; }
-
-.contacts__map {
-  height: 100%;
-  width: 100%; }
+  position: relative;
+  background: url("https://codeman23.github.io/mburger/img/map.jpg") no-repeat center center;
+  background-size: cover; }
 
 .contacts__footer {
   width: 100%;

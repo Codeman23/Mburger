@@ -323,7 +323,7 @@
 
 				<h2 class="title delivery__title">Закажите доставку</h2>
 
-				<form action="" class="delivery__form">
+				<form action="action.php" method="post" class="delivery__form">
 
 					<div class="form__wrap">
 
@@ -332,37 +332,37 @@
 							<div class="form__row">
 								<div class="form__elem">
 									<label for="name" class="form__elem-title" >Имя</label>
-									<input type="text" name="" id="name" class="form__input">
+									<input type="text" name="name" id="name" class="form__input">
 								</div>
 								<div class="form__elem">
 									<label for="phone" class="form__elem-title" >Телефон</label>
-									<input type="text" name="" id="phone" class="form__input">
+									<input type="text" name="phone" id="phone" class="form__input">
 								</div>
 							</div>
 
 							<div class="form__row">
 								<div class="form__elem">
 									<label for="street" class="form__elem-title" >Улица</label>
-									<input type="text" name="" id="street" class="form__input">
+									<input type="text" name="street" id="street" class="form__input">
 								</div>
 							</div>
 
 							<div class="form__row form__row_phones">
 								<div class="form__elem">
 									<label for="house" class="form__elem-title" >Дом</label>
-									<input type="text" name="" id="house" class="form__input">
+									<input type="text" name="house" id="house" class="form__input">
 								</div>
 								<div class="form__elem">
 									<label for="corpus" class="form__elem-title" >Корпус</label>
-									<input type="text" name="" id="corpus" class="form__input">
+									<input type="text" name="corpus" id="corpus" class="form__input">
 								</div>
 								<div class="form__elem">
 									<label for="flat" class="form__elem-title" >Квартира</label>
-									<input type="text" name="" id="flat" class="form__input">
+									<input type="text" name="flat" id="flat" class="form__input">
 								</div>
 								<div class="form__elem">
 									<label for="floor" class="form__elem-title" >Этаж</label>
-									<input type="text" name="" id="floor" class="form__input">
+									<input type="text" name="floor" id="floor" class="form__input">
 								</div>
 							</div>
 
@@ -371,7 +371,7 @@
 						<div class="form__right">
 							<div class="form__textarea">
 								<label for="textArea" class="form__elem-title">Комментарий</label>
-								<textarea name="" id="textArea" cols="30" rows="10" class="form__big-text-input"></textarea>
+								<textarea name="text" id="textArea" cols="30" rows="10" class="form__big-text-input"></textarea>
 							</div>
 
 							<div class="form__buttons">
@@ -380,11 +380,11 @@
 
 									<div class="form__radios-container">
 										<div class="form__radio">
-											<input type="radio" name="" id="money" class="form__radio-elem">
+											<input type="radio" name="money" id="money" class="form__radio-elem">
 											<label for="money" class="form__radio-name">Потребуется сдача</label>
 										</div>
 										<div class="form__radio">
-											<input type="radio" name="" id="card" class="form__radio-elem">
+											<input type="radio" name="card" id="card" class="form__radio-elem">
 											<label for="card" class="form__radio-name">Оплата по карте</label>
 										</div>
 									</div>
@@ -392,7 +392,7 @@
 								</div>
 
 								<div class="form__checkbox">
-									<input type="checkbox" name="" value="" id="call" class="form__checkbox-elem">
+									<input type="checkbox" name="checkbox" value="" id="call" class="form__checkbox-elem">
 									<label for="call" class="form__checkbox-name">Не перезванивать</label>
 								</div>
 
@@ -418,9 +418,7 @@
 		</section>
 
 		<section class="section contacts">
-			<div class="contacts__map">
-				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=rlba5SMdeH10jtV4UvnrVDHu5xkAKhxh&amp;height=100%&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
-			</div>
+			<div class="contacts__map"></div>
 
 			<footer class="contacts__footer">
 				<div class="container footer__container">
