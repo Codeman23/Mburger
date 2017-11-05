@@ -84,7 +84,7 @@
   margin-bottom: rem(103px);
 
   @include phones {
-    font-size: 50px;
+    font-size: rem(50px);
     margin-bottom: rem(103px);
   }
 }
