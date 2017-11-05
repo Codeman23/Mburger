@@ -1,8 +1,9 @@
+// button
 @mixin button($background:#e45028) {
   padding: 10px 15px;
   border-radius: 5px;
   font-family: ubuntu-medium, sans-serif;
-  font-size: 13px;
+  font-size: rem(13px);
   text-transform: uppercase;
   cursor: pointer;
   color: #fff;
@@ -10,6 +11,7 @@
   background: $background;
   transition: background .5s ease-in-out;
   text-decoration: none;
+  display: inline-block;
 
   &:hover {
     background: darken( $background, 15% );
@@ -23,7 +25,21 @@
   background: $color;
 }
 
-//responsive
-@function rem($px) {
-  @return $px / 14px+0rem;
+
+//placeholder
+
+@mixin placeholder($color: #000000) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    color: $color;
+  }
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
 }
+

@@ -1,0 +1,264 @@
+.delivery {
+  background: url('https://codeman23.github.io/mburger/img/delivery_bg.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.delivery__title {
+  padding-bottom: rem(76px);
+  font-size: rem(72px);
+  text-align: center;
+  line-height: 1.1;
+
+  @include phones {
+    font-size: rem(50px);
+    text-align: center;
+    padding-bottom: rem(30px);
+  }
+}
+
+.form__wrap {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.form__left {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  padding-right: rem(10px);
+
+  @include tablets {
+    max-width: rem(460px);
+    width: 100%;
+    padding-right: 0;
+  }
+
+}
+
+.form__row {
+  display: flex;
+  width: 100%;
+}
+
+.form__elem {
+  flex: 1;
+  margin-right: rem(20px);
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.form__row_phones .form__elem:nth-child(3){
+  @include phones {
+    margin-right: 0;
+  }
+}
+
+.form__row_phones .form__elem:nth-child(4){
+  @include phones {
+    display: none;
+  }
+}
+
+
+.form__elem-title {
+  color: $white;
+  display: block;
+  margin-bottom: rem(2px);
+  font-size: rem(14px);
+}
+
+.form__input {
+  width: 100%;
+  font-family:robotolight, sans-serif;
+  font-size: rem(14px);
+  color: $black;
+  padding: rem(8px)  rem(20px);
+  border-radius: rem(5px);
+  border: rem(2px)  solid $white;
+  margin-bottom: rem(13px);
+  outline: none;
+  font-size: rem(14px);
+  transition: border .5s ease-in-out;
+
+  &:focus{
+    border: rem(2px)  solid $yellow;
+    outline-offset:2px;
+  }
+}
+
+.form__right {
+  @extend .form__left;
+  padding-right: 0;
+  padding-left: rem(10px);
+
+  @include tablets {
+    padding-left: 0;
+  }
+}
+
+.form__textarea {
+  width: 100%;
+
+  @include phones {
+    margin-bottom: rem(25px);
+  }
+}
+
+.form__big-text-input {
+  @extend .form__input;
+  height: rem(110px);
+  width: 100%;
+  resize: none;
+  margin-bottom: rem(8px);
+  outline: none;
+}
+
+.form__buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @include phones {
+    align-items: center;
+  }
+}
+
+.form__radios {
+  width: 100%;
+}
+
+.form__radios-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: rem(18px);
+
+  @include phones {
+    align-content: center;
+    justify-content: center;
+    margin-bottom: rem(28px);
+  }
+}
+
+.form__radio{
+  font-size: rem(14px);
+}
+
+.form__radio-name {
+  color: $white;
+}
+
+.form__radio-elem {
+  vertical-align: top;
+  width: rem(15px);
+  height: rem(15px);
+  margin: 0 rem(3px)  0 0;
+}
+
+.form__radio-elem + .form__radio-name {
+  cursor: pointer;
+}
+.form__radio-elem:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+.form__radio-elem:not(checked) + .form__radio-name {
+  position: relative;
+  padding: 0 rem(20px)  0 rem(25px) ;
+
+}
+.form__radio-elem:not(checked) + .form__radio-name:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: rem(15px);
+  height: rem(15px);
+  border-radius: 50%;
+  background: $white;
+}
+.form__radio-elem:not(checked) + .form__radio-name:after {
+  content: '';
+  position: absolute;
+  top: rem(4px);
+  left: rem(4px);
+  width: rem(7px);
+  height: rem(7px);
+  border-radius: 50%;
+  background: $red;
+  opacity: 0;
+  transition: all .2s;
+}
+.form__radio-elem:checked + .form__radio-name:after {
+  opacity: 1;
+}
+
+.form__checkbox {
+  margin-bottom: rem(15px);
+
+  @include phones{
+    margin-bottom: rem(35px);
+  }
+
+}
+
+
+.form__checkbox-elem {
+  display: none;
+}
+
+.form__checkbox-name {
+  color: $white;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding-left: rem(25px);
+  margin-right: rem(15px);
+}
+
+.form__checkbox-name:before {
+  content: "";
+  display: inline-block;
+  width: rem(15px);
+  height: rem(15px);
+  margin-right: rem(10px);
+  position: absolute;
+  left:0;
+  top:15%;
+  bottom: rem(1px) ;
+  background-color: $white;
+}
+
+.form__checkbox-elem:checked + .form__checkbox-name:before {
+  content: "\2714";
+  font-size: rem(15px);
+  font-weight: 900;
+  color: $red;
+  text-align: center;
+  line-height: rem(15px);
+}
+
+
+.button_reset {
+  background: none;
+  color: $white;
+  border: none;
+  cursor: pointer;
+  margin-left: rem(13px);
+}
+
+.form__button {
+  @include button();
+}
+

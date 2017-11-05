@@ -1,0 +1,105 @@
+.contacts {
+  background: #d6d6d6;
+  position: relative;
+}
+
+.contacts__map {
+  height: 100%;
+  width: 100%;
+}
+
+
+.contacts__footer {
+  width: 100%;
+  height: rem(60px);
+  background: url('https://codeman23.github.io/mburger/img/footer_bg.jpg') repeat center center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  @include tablets {
+    padding:0 20px;
+  }
+
+  @include phones {
+    height: rem(116px);
+  }
+}
+
+
+.footer__container{
+  height: rem(60px);
+  flex-direction: row;
+  width: 100%;
+  max-width: rem(940px);
+
+  @include phones {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: rem(116px);
+  }
+}
+
+.footer__address {
+  width: 63%;
+  font-size: rem(14px);
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+.footer__house {
+  color: $white;
+}
+
+.phone__icon {
+  font-family: svgfont_1regular, sans-serif;
+  color: $red;
+  font-size: rem(13px);
+  vertical-align: middle;
+  padding-right: rem(5px);
+}
+
+.phone__number {
+  font-family: ubuntu-bold, sans-serif;
+  font-weight: 800;
+  color:$red;
+  text-decoration: none;
+}
+
+.footer__socials {
+  width: 37%;
+  text-align: right;
+
+  @include phones {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.social__item {
+  display: inline-block;
+}
+
+.social__link {
+  display: inline-block;
+  text-decoration: none;
+  font-family: svgfont_1regular, sans-serif;
+  font-size: rem(23px);
+  margin: rem(6px) rem(12.8px);
+  color: $white;
+  opacity: .3;
+  transition: opacity .5s ease-in-out;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+}
+

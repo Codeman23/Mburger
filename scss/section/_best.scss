@@ -1,64 +1,128 @@
 .best {
   background: url('https://codeman23.github.io/mburger/img/best_bg.jpg') no-repeat center center;
   background-size: cover;
+}
+
+.best__title {
+  color: $black;
+  display: block;
+  font-size: rem(72px);
+  margin-bottom: rem(134px);
+  letter-spacing: rem(2px);
+
+  @include phones {
+    font-size: rem(50px);
+    margin-bottom: rem(65px);
+  }
+}
+
+.best__content {
   display: flex;
+  width: 100%;
+  flex: 1;
   justify-content: center;
-  align-items: center;
 
-  &__title {
-    display: block;
-    font-size: 68px;
-    margin-bottom: 134px;
-    letter-spacing: 2px;
+  @include phones {
+    flex-direction: column;
   }
-
-  &__content {
-    display: flex;
-    flex-direction: row;
-  }
-
 }
 
 .content-item {
   display: flex;
   flex-direction: column;
-  width: 320px;
-  padding:0 16px;
+  width: 100%;
+  max-width: rem(320px);
+  padding:0 rem(16px);
   text-align: center;
 
-  &__icon {
-    font-family: svgfont_1regular, sans-serif;
-    font-size: 100px;
+  @include tablets {
+    width: rem(224px);
+  }
+
+  @include  phones {
+    flex-direction: row;
     width: 100%;
-    height: 64px;
-    margin-bottom: 22px;
-    color: $red;
+    align-items:center;
+    margin-bottom: rem(41px);
+    max-width: rem(480px);
   }
 
-  &__title {
-    font-family: lifehackmedium,sans-serif;
-    font-size: 24px;
-    margin-bottom: 15px;
-    line-height: 29px;
-    letter-spacing: -0.6px;
-    margin-left: -5px;
-  }
-
-
-  &__icon_two {
-    font-size: 90px;
-    margin-top:-5px;
-    height: 69px;
-    color: $yellow;
-  }
-
-  &__icon_three {
-    @extend .content-item__icon_two;
-    color: $green;
-  }
-
-  &__title_three {
-    margin-bottom: 5px;
+  &:last-child {
+    @include  phones {
+      margin-bottom: rem(0px);
+    }
   }
 
 }
+
+.content-item__data {
+  @include phones {
+    text-align: left;
+    flex-direction: column;
+  }
+}
+
+.content-item__icon {
+  font-family: svgfont_1regular, sans-serif;
+  font-size: rem(100px);
+  width: 100%;
+  height: rem(64px);
+  margin-bottom: rem(22px);
+  color: $red;
+
+  @include phones {
+    width: rem(100px);
+    margin-right: rem(25px);
+    height: 50%;
+    margin-bottom: 0;
+  }
+}
+
+.content-item__icon_two {
+  font-size: rem(90px);
+  margin-top: rem(-5px);
+  height: rem(69px);
+  color: $yellow;
+
+  @include phones {
+    margin-bottom: 0;
+    height: 50%;
+    margin-top: 0;
+  }
+}
+
+.content-item__text {
+  font-size: rem(14px);
+
+
+
+}
+
+
+.content-item__title {
+  font-family: lifehackmedium,sans-serif;
+  font-size: rem(24px);
+  margin-bottom: rem(15px);
+  line-height: rem(29px);
+  letter-spacing: 0;
+  margin-left: rem(-5px);
+
+  @include phones {
+    //margin-bottom: 0;
+    height: 50%;
+    margin-left: 0;
+    letter-spacing: rem(-1px);
+  }
+}
+
+
+.content-item__icon_three {
+  @extend .content-item__icon_two;
+  color: $green;
+}
+
+.content-item__title_three {
+  margin-bottom: rem(5px);
+}
+
+

@@ -1,0 +1,29 @@
+.pages {
+  display: block;
+  position: fixed;
+  right: rem(57px);
+  top: rem(94px);
+  z-index: 2;
+}
+
+.pages__point {
+  width: rem(6px);
+  height: rem(6px);
+  background: $white;
+  border-radius: 50%;
+  margin-bottom: rem(15.4px);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  &_active:before {
+    position: absolute;
+    content: '';
+    width: rem(14px);
+    height: rem(14px);
+    border: rem(1px) solid $white;
+    border-radius: 50%;
+  }
+}

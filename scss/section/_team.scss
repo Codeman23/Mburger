@@ -1,0 +1,196 @@
+.team {
+  background: url('https://codeman23.github.io/mburger/img/team_bg.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  //display: flex;
+  //justify-content: flex-end;
+  //align-items: center;
+  //position: relative;
+}
+
+/*.team__content {
+  background-color: $black;
+  opacity: .9;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+}
+
+.team__container {
+  height: 100%;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items:flex-start;
+  padding-left: rem(80px);
+}*/
+
+.team__container {
+  position: absolute;
+  top:0;
+  bottom:0;
+  right: 0;
+  width: 50%;
+  background: rgba(#2f3234, .95);
+  padding-left: rem(70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  @include tablets {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+.team__content {
+  margin-top: 20%;
+
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: rem(66px);
+  }
+}
+
+.team__accord {
+  line-height: 0;
+  display: block;
+
+  @include tablets{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.team__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: rem(23px);
+
+  @include tablets {
+    align-items: center;
+  }
+}
+
+.team__title {
+  font-size: rem(72px);
+  color: $yellow;
+  margin-bottom: rem(103px);
+
+  @include phones {
+    font-size: 50px;
+    margin-bottom: rem(103px);
+  }
+}
+
+.mate__title {
+  //padding-left: rem(20px);
+  //position: relative;
+  //display: block;
+  color: $white;
+  margin-bottom: rem(21px);
+  font-size: rem(14px);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: color .3s ease-in-out;
+  font-family: gagalinregular, sans-serif;
+
+  &:hover {
+    color: $yellow;
+  }
+
+  &:before{
+    content: '';
+    //position: absolute;
+    //top:-rem(3px);
+    //left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: rem(6px) rem(5px) 0 rem(5px);
+    border-color: #f9b33b transparent transparent;
+    margin-right: rem(10px);
+  }
+
+  @include tablets{
+    font-size: rem(24px);
+    margin-bottom: rem(28px);
+  }
+
+}
+
+.mate__desc {
+  display: flex;
+  align-items:flex-start;
+  padding-left: rem(16px);
+  height: 0;
+  overflow: hidden;
+
+  @include tablets{
+    flex-direction: column;
+    align-items:center;
+    padding-left: 0;
+  }
+}
+
+.mate__info {
+  margin-top: rem(7px);
+}
+
+.mate__photo {
+  border-radius: 50%;
+  margin-right: rem(23px);
+  margin-bottom: rem(23px);
+
+  @include tablets{
+    margin-right: 0;
+    margin-bottom: rem(20px);
+  }
+}
+
+.mate__post {
+  font-size: rem(14px);
+  font-family: ubuntu-bold, sans-serif;
+  color: $white;
+  margin-bottom: rem(22px);
+
+  @include tablets{
+    text-align: center;
+  }
+}
+
+.mate__text {
+  margin-top: rem(7px);
+  width: rem(240px);
+  color: $white;
+  line-height: rem(24px);
+  font-size: rem(14px);
+
+  @include tablets {
+    text-align: center;
+    width: rem(320px);
+    margin-bottom: 20px;
+
+  }
+}
+
+.team__item_active {
+
+  .mate__title {
+    color: $yellow;
+  }
+  .mate__title:before {
+    transform: rotate(-180deg);
+  }
+  .mate__desc{
+    height: 100%;
+  }
+
+}

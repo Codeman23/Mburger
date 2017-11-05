@@ -7,11 +7,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-
 	<link href="https://codeman23.github.io/mburger/css/normalize.css" type="text/css" rel="stylesheet" />
 	<link href="https://codeman23.github.io/mburger/css/main.css" type="text/css" rel="stylesheet" />
 
-	<title>Mr.Burger</title>
+	<title>Mb</title>
 
 	<link rel="icon" type="image/x-icon" href="#">
 </head>
@@ -22,76 +21,55 @@
 
 	<div class="main-content">
 
-		<ul class="pages">
-			<li class="pages__switch">
-				<a href="" class="pages__link"><span class="pages__point pages__point_active"></span></a>
-			</li>
-			<li class="pages__switch">
-				<a href="" class="pages__link"><span class="pages__point"></span></a>
-			</li>
-			<li class="pages__switch">
-				<a href="" class="pages__link"><span class="pages__point"></span></a>
-			</li>
-			<li class="pages__switch">
-				<a href="" class="pages__link"><span class="pages__point"></span></a>
-			</li>
-			<li class="pages__switch">
-				<a href="" class="pages__link "><span class="pages__point"></span></a>
-			</li>
-			<li class="pages__switch">
-				<a href="" class="pages__link"><span class="pages__point"></span></a>
-			</li>
-			<li class="pages__switch">
-				<a href="" class="pages__link"><span class="pages__point"></span></a>
-			</li>
-			<li class="pages__switch">
-				<a href="" class="pages__link"><span class="pages__point"></span></a>
-			</li>
-		</ul>
-
-		<section class="section first">
+		<section class="section first section_centered">
 
 			<div class="container first__container">
 
 				<header class='header'>
 
-					<div class="header__logo">
-						<a href="index.html" class="header__logo">
-							<img class="logo-svg" src="https://codeman23.github.io/mburger/svg/logo.svg" alt="лого компании">
-						</a>
-					</div>
+					<a href="index.html" class="header__logo">
+						<img class="logo-svg" src="https://codeman23.github.io/mburger/svg/logo.svg" alt="лого компании">
+					</a>
 
 					<div class="header__menu">
 
-						<nav class="navigation">
+						<nav class="nav">
 
-							<ul class="navigation__list">
-								<li class="navigation__item"><a class="navigation__link" href="#" data-goto="1" >О нас</a>
+							<ul class="nav__list">
+								<li class="nav__item">
+									<a class="nav__link" href="#" data-goto="1" >О нас</a>
 								</li>
-								<li class="navigation__item">
-									<a class="navigation__link" href="#" data-goto="2" >Бургеры</a>
+								<li class="nav__item">
+									<a class="nav__link" href="#" data-goto="2" >Бургеры</a>
 								</li>
-								<li class="navigation__item">
-									<a class="navigation__link" href="#" data-goto="3" >Команда</a>
+								<li class="nav__item">
+									<a class="nav__link" href="#" data-goto="3" >Команда</a>
 								</li>
-								<li class="navigation__item">
-									<a class="navigation__link" href="#" data-goto="4" >Меню</a>
+								<li class="nav__item">
+									<a class="nav__link" href="#" data-goto="4" >Меню</a>
 								</li>
-								<li class="navigation__item">
-									<a class="navigation__link" href="#" data-goto="5" >Отзывы</a>
+								<li class="nav__item">
+									<a class="nav__link" href="#" data-goto="5" >Отзывы</a>
 								</li>
-								<li class="navigation__item">
-									<a class="navigation__link" href="#" data-goto="7" >Контакты</a>
+								<li class="nav__item">
+									<a class="nav__link" href="#" data-goto="7" >Контакты</a>
 								</li>
 							</ul>
 
 						</nav>
-
 					</div>
 
 					<div class="header__btn">
-						<a class="button" href="#" data-goto="6">Заказать</a>
+						<a class="button header__button" href="#" data-goto="6">Заказать</a>
 					</div>
+
+					<button class="toggle_mnu">
+						<span class="sandwich">
+							<span class="sw-topper"></span>
+							<span class="sw-bottom"></span>
+							<span class="sw-footer"></span>
+						</span>
+					</button>
 
 				</header>
 
@@ -105,114 +83,392 @@
 					</div>
 
 					<div class="first__scroll">
-						<span class="first__scroll-icon">n</span>
+						<a href="#" class="first__scroll-icon">n</a>
 					</div>
 
 				</div>
 
-
 			</div>
 		</section>
 
-		<section class="section best">
+		<section class="section best section_centered">
 
 			<div class="container best__container">
 
 				<h2 class="title best__title">Мы лучшие</h2>
 
-				<div class="best__content">
+				<ul class="best__content">
 
-					<div class="content-item">
+					<li class="content-item">
 						<span class="content-item__icon">a</span>
-						<span class="content-item__title">100% свежее мясо</span>
-						<span class="content-item__text">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</span>
-					</div>
+						<div class="content-item__data">
+							<div class="content-item__title">100% свежее мясо</div>
+							<div class="content-item__text"><p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p></div>
+						</div>
+					</li>
 
-					<div class="content-item">
+					<li class="content-item">
 						<span class="content-item__icon content-item__icon_two">b</span>
-						<span class="content-item__title">Ручная сборка</span>
-						<span class="content-item__text">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</span>
-					</div>
+						<div class="content-item__data">
+							<div class="content-item__title">Ручная сборка</div>
+							<div class="content-item__text"><p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</p></div>
+						</div>
+					</li>
 
-					<div class="content-item">
+					<li class="content-item">
 						<span class="content-item__icon content-item__icon_three">c</span>
-						<span class="content-item__title content-item__title_three">Натуральные ингридиенты</span>
-						<span class="content-item__text">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</span>
-					</div>
+						<div class="content-item__data">
+							<div class="content-item__title content-item__title_three">Натуральные ингридиенты</div>
+							<div class="content-item__text"><p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p></div>
+						</div>
+					</li>
 
-				</div>
+				</ul>
 
 			</div>
 		</section>
 
 		<section class="section reviews">
 
-			<div class="reviews__item">
-				<img src="https://codeman23.github.io/mburger/img/photo_1.jpg" alt="" class="reviews__photo">
-				<div class="reviews__desc">
-					<h5 class="reviews__title">Константин Спилберг</h5>
-					<div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-					<input type="button" value="Подробнее" class="reviews__button">
+			<ul class="reviews__list">
+				<li class="reviews__item" style="background-image: url('https://codeman23.github.io/mburger/img/photo_1.jpg')">
+					<div class="reviews__back">
+						<div class="reviews__desc">
+							<h5 class="reviews__title">Константин Спилберг</h5>
+							<div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+							<button class="reviews__button">Подробнее</button>
+						</div>
+					</div>
+				</li>
+				<li class="reviews__item" style="background-image: url('https://codeman23.github.io/mburger/img/photo_2.jpg')">
+					<div class="reviews__back">
+						<div class="reviews__desc">
+							<h5 class="reviews__title">Константин Спилберг</h5>
+							<div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+							<button class="reviews__button">Подробнее</button>
+						</div>
+					</div>
+				</li>
+				<li class="reviews__item" style="background-image: url('https://codeman23.github.io/mburger/img/photo_3.jpg')">
+					<div class="reviews__back">
+						<div class="reviews__desc">
+							<h5 class="reviews__title">Константин Спилберг</h5>
+							<div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+							<button class="reviews__button">Подробнее</button>
+						</div>
+					</div>
+				</li>
+				<li class="reviews__item" style="background-image: url('https://codeman23.github.io/mburger/img/photo_4.jpg')">
+					<div class="reviews__back">
+						<div class="reviews__desc">
+							<h5 class="reviews__title">Константин Спилберг</h5>
+							<div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+							<button class="reviews__button">Подробнее</button>
+						</div>
+					</div>
+				</li>
+				<li class="reviews__item" style="background-image: url('https://codeman23.github.io/mburger/img/photo_5.jpg')">
+					<div class="reviews__back">
+						<div class="reviews__desc">
+							<h5 class="reviews__title">Константин Спилберг</h5>
+							<div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+							<button class="reviews__button">Подробнее</button>
+						</div>
+					</div>
+				</li>
+				<li class="reviews__item" style="background-image: url('https://codeman23.github.io/mburger/img/photo_6.jpg')">
+					<div class="reviews__back">
+						<div class="reviews__desc">
+							<h5 class="reviews__title">Константин Спилберг</h5>
+							<div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+							<button class="reviews__button">Подробнее</button>
+						</div>
+					</div>
+				</li>
+				<li class="reviews__item" style="background-image: url('https://codeman23.github.io/mburger/img/photo_7.jpg')">
+					<div class="reviews__back">
+						<div class="reviews__desc">
+							<h5 class="reviews__title">Константин Спилберг</h5>
+							<div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+							<button class="reviews__button">Подробнее</button>
+						</div>
+					</div>
+				</li>
+				<li class="reviews__item" style="background-image: url('https://codeman23.github.io/mburger/img/photo_8.jpg')">
+					<div class="reviews__back">
+						<div class="reviews__desc">
+							<h5 class="reviews__title">Константин Спилберг</h5>
+							<div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+							<button class="reviews__button">Подробнее</button>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+		</section>
+
+		<section class="section team">
+
+			<div class="team__container">
+
+				<div class="team__content">
+
+					<h2 class="team__title">Команда</h2>
+
+					<ul class="team__accord">
+
+						<li class="team__item">
+							<a class="mate__title">Дэниэл Редклиф</a>
+							<div class="mate__desc">
+								<img src="https://codeman23.github.io/mburger/img/mate.jpg" alt="" class="mate__photo">
+								<div class="mate__info">
+									<div class="mate__post">Оператор</div>
+									<div class="mate__text"><p>С радостью поможет подобрать идеальный бургер и оформить заказ.</p></div>
+								</div>
+							</div>
+						</li>
+
+						<li class="team__item team__item_active">
+							<a class="mate__title">Ричард Джеймс</a>
+							<div class="mate__desc">
+								<img src="https://codeman23.github.io/mburger/img/mate.jpg" alt="" class="mate__photo">
+								<div class="mate__info">
+									<div class="mate__post">Оператор</div>
+									<div class="mate__text"><p>С радостью поможет подобрать идеальный бургер и оформить заказ.</p></div>
+								</div>
+							</div>
+						</li>
+
+						<li class="team__item">
+							<a class="mate__title">Джейк Финн</a>
+							<div class="mate__desc">
+								<img src="https://codeman23.github.io/mburger/img/mate.jpg" alt="" class="mate__photo">
+								<div class="mate__info">
+									<div class="mate__post">Оператор</div>
+									<div class="mate__text"><p>С радостью поможет подобрать идеальный бургер и оформить заказ.</p></div>
+								</div>
+							</div>
+						</li>
+
+						<li class="team__item">
+							<a class="mate__title">Николай Иванов</a>
+							<div class="mate__desc">
+								<img src="https://codeman23.github.io/mburger/img/mate.jpg" alt="" class="mate__photo">
+								<div class="mate__info">
+									<div class="mate__post">Оператор</div>
+									<div class="mate__text"><p>С радостью поможет подобрать идеальный бургер и оформить заказ.</p></div>
+								</div>
+							</div>
+						</li>
+
+
+					</ul>
+
 				</div>
-			</div>
-			<div class="reviews__item">
-				<img src="https://codeman23.github.io/mburger/img/photo_2.jpg" alt="" class="reviews__photo">
-				<div class="reviews__desc">
-					<h5 class="reviews__title">Константин Спилберг</h5>
-					<div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-					<input type="button" value="Подробнее" class="reviews__button">
-				</div>
-			</div>
-			<div class="reviews__item">
-				<img src="https://codeman23.github.io/mburger/img/photo_3.jpg" alt="" class="reviews__photo">
-				<div class="reviews__desc">
-					<h5 class="reviews__title">Константин Спилберг</h5>
-					<div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-					<input type="button" value="Подробнее" class="reviews__button">
-				</div>
-			</div>
-			<div class="reviews__item">
-				<img src="https://codeman23.github.io/mburger/img/photo_4.jpg" alt="" class="reviews__photo">
-				<div class="reviews__desc">
-					<h5 class="reviews__title">Константин Спилберг</h5>
-					<div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-					<input type="button" value="Подробнее" class="reviews__button">
-				</div>
-			</div>
-			<div class="reviews__item">
-				<img src="https://codeman23.github.io/mburger/img/photo_5.jpg" alt="" class="reviews__photo">
-				<div class="reviews__desc">
-					<h5 class="reviews__title">Константин Спилберг</h5>
-					<div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-					<input type="button" value="Подробнее" class="reviews__button">
-				</div>
-			</div>
-			<div class="reviews__item">
-				<img src="https://codeman23.github.io/mburger/img/photo_6.jpg" alt="" class="reviews__photo">
-				<div class="reviews__desc">
-					<h5 class="reviews__title">Константин Спилберг</h5>
-					<div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-					<input type="button" value="Подробнее" class="reviews__button">
-				</div>
-			</div>
-			<div class="reviews__item">
-				<img src="https://codeman23.github.io/mburger/img/photo_7.jpg" alt="" class="reviews__photo">
-				<div class="reviews__desc">
-					<h5 class="reviews__title">Константин Спилберг</h5>
-					<div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-					<input type="button" value="Подробнее" class="reviews__button">
-				</div>
-			</div>
-			<div class="reviews__item">
-				<img src="https://codeman23.github.io/mburger/img/photo_8.jpg" alt="" class="reviews__photo">
-				<div class="reviews__desc">
-					<h5 class="reviews__title">Константин Спилберг</h5>
-					<div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-					<input type="button" value="Подробнее" class="reviews__button">
-				</div>
+
 			</div>
 
 		</section>
+
+		<section class="section menu">
+
+			<div class="container menu__container">
+				<h2 class="menu__title">Меню</h2>
+			</div>
+
+			<ul class="menu__accord">
+
+				<li class="menu__item">
+
+					<div class="menu__button" style="background-image: url('https://codeman23.github.io/mburger/img/meat.jpg')">
+						<h3 class="menu__subtitle">Для мясоедов</h3>
+					</div>
+					<div class="menu__desc">
+						Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
+						однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
+						Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+					</div>
+				</li>
+
+				<li class="menu__item">
+					<div class="menu__button" style="background-image: url('https://codeman23.github.io/mburger/img/vegan.jpg')">
+						<h3 class="menu__subtitle">Вегитарианское</h3>
+					</div>
+					<div class="menu__desc">
+						Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
+						однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
+						Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+					</div>
+				</li>
+
+				<li class="menu__item">
+					<div class="menu__button" style="background-image: url('https://codeman23.github.io/mburger/img/diet.jpg')">
+						<h3 class="menu__subtitle">Диетическое</h3>
+					</div>
+					<div class="menu__desc">
+						Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
+						однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
+						Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+					</div>
+				</li>
+			</ul>
+
+		</section>
+
+
+
+		<section class="section delivery section_centered">
+
+			<div class="container delivery__container">
+
+				<h2 class="title delivery__title">Закажите доставку</h2>
+
+				<form action="" class="delivery__form">
+
+					<div class="form__wrap">
+
+						<div class="form__left">
+
+							<div class="form__row">
+								<div class="form__elem">
+									<label for="name" class="form__elem-title" >Имя</label>
+									<input type="text" name="" id="name" class="form__input">
+								</div>
+								<div class="form__elem">
+									<label for="phone" class="form__elem-title" >Телефон</label>
+									<input type="text" name="" id="phone" class="form__input">
+								</div>
+							</div>
+
+							<div class="form__row">
+								<div class="form__elem">
+									<label for="street" class="form__elem-title" >Улица</label>
+									<input type="text" name="" id="street" class="form__input">
+								</div>
+							</div>
+
+							<div class="form__row form__row_phones">
+								<div class="form__elem">
+									<label for="house" class="form__elem-title" >Дом</label>
+									<input type="text" name="" id="house" class="form__input">
+								</div>
+								<div class="form__elem">
+									<label for="corpus" class="form__elem-title" >Корпус</label>
+									<input type="text" name="" id="corpus" class="form__input">
+								</div>
+								<div class="form__elem">
+									<label for="flat" class="form__elem-title" >Квартира</label>
+									<input type="text" name="" id="flat" class="form__input">
+								</div>
+								<div class="form__elem">
+									<label for="floor" class="form__elem-title" >Этаж</label>
+									<input type="text" name="" id="floor" class="form__input">
+								</div>
+							</div>
+
+						</div>
+
+						<div class="form__right">
+							<div class="form__textarea">
+								<label for="textArea" class="form__elem-title">Комментарий</label>
+								<textarea name="" id="textArea" cols="30" rows="10" class="form__big-text-input"></textarea>
+							</div>
+
+							<div class="form__buttons">
+
+								<div class="form__radios">
+
+									<div class="form__radios-container">
+										<div class="form__radio">
+											<input type="radio" name="" id="money" class="form__radio-elem">
+											<label for="money" class="form__radio-name">Потребуется сдача</label>
+										</div>
+										<div class="form__radio">
+											<input type="radio" name="" id="card" class="form__radio-elem">
+											<label for="card" class="form__radio-name">Оплата по карте</label>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="form__checkbox">
+									<input type="checkbox" name="" value="" id="call" class="form__checkbox-elem">
+									<label for="call" class="form__checkbox-name">Не перезванивать</label>
+								</div>
+
+								<div class="form__controls">
+
+									<button type="submit" class="button form__button">
+										<span class="form__submit-text">Заказать</span>
+									</button>
+
+									<button type="reset" class="button_reset">Очистить</button>
+
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+				</form>
+
+			</div>
+
+		</section>
+
+		<section class="section contacts">
+			<div class="contacts__map">
+				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=rlba5SMdeH10jtV4UvnrVDHu5xkAKhxh&amp;height=100%&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+			</div>
+
+			<footer class="contacts__footer">
+				<div class="container footer__container">
+					<div class="footer__address">
+						<div class="footer__house">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
+						<div class="footer__phone">
+							<span class="phone__icon">u</span>
+							<span class="phone__number">+7 (812) 377-13-77</span>
+						</div>
+					</div>
+					<ul class="footer__socials">
+						<li class="social__item"><a href="#" class="social__link">q</a></li>
+						<li class="social__item"><a href="#" class="social__link">r</a></li>
+						<li class="social__item"><a href="#" class="social__link">s</a></li>
+						<li class="social__item"><a href="#" class="social__link">t</a></li>
+					</ul>
+				</div>
+			</footer>
+		</section>
+
+		<div class="pages__wrap">
+			<ul class="pages">
+				<li class="pages__switch">
+					<a href="" class="pages__link"><span class="pages__point pages__point_active"></span></a>
+				</li>
+				<li class="pages__switch">
+					<a href="" class="pages__link"><span class="pages__point"></span></a>
+				</li>
+				<li class="pages__switch">
+					<a href="" class="pages__link"><span class="pages__point"></span></a>
+				</li>
+				<li class="pages__switch">
+					<a href="" class="pages__link"><span class="pages__point"></span></a>
+				</li>
+				<li class="pages__switch">
+					<a href="" class="pages__link "><span class="pages__point"></span></a>
+				</li>
+				<li class="pages__switch">
+					<a href="" class="pages__link"><span class="pages__point"></span></a>
+				</li>
+				<li class="pages__switch">
+					<a href="" class="pages__link"><span class="pages__point"></span></a>
+				</li>
+				<li class="pages__switch">
+					<a href="" class="pages__link"><span class="pages__point"></span></a>
+				</li>
+			</ul>
+		</div>
 
 	</div>
 

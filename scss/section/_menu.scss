@@ -1,0 +1,101 @@
+.menu {
+  background: url('https://codeman23.github.io/mburger/img/menu_bg.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+.menu__container{
+  align-items: flex-start;
+  margin-bottom: auto;
+  //margin-bottom: 20%;
+}
+
+.menu__title {
+  font-size: rem(72px);
+  color: $white;
+  padding-top: rem(120px);
+
+  @include phones {
+    font-size: rem(50px);
+  }
+}
+
+.menu__accord {
+  width:50%;
+  height: 100%;
+  background-size: cover;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu__item {
+  display: flex;
+  flex-direction: row;
+  background: rgba(#2f3234, .95);
+}
+
+.menu__button {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: rem(80px);
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    .menu__subtitle{
+      color: $yellow;
+    }
+  }
+
+}
+
+.menu__subtitle {
+  position: absolute;
+  width: rem(300px);
+  transform: rotate(-90deg);
+  font-size: rem(40px);
+  color: $white;
+  text-align: center;
+  transition: color .5s ease-in-out;
+}
+
+.menu__pic {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.menu__desc {
+  margin-top:rem(55px);
+  padding-left: 0;
+  width: 0;
+  overflow: hidden;
+  color: $white;
+  font-size: rem(14px);
+}
+
+.menu__item_active {
+
+  .menu__desc {
+    margin-left: rem(35px);
+    width: rem(505px);
+
+    @include tablets {
+      width: rem(425px);
+    }
+
+  }
+
+  .menu__button .menu__subtitle {
+    color: $yellow;
+  }
+
+}

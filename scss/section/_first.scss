@@ -1,187 +1,239 @@
-.pages {
-  display: block;
-  position: fixed;
-  right: 57px;
-  top: 94px;
-  z-index: 2;
-
-  &__point {
-    width: 6px;
-    height: 6px;
-    background: $white;
-    display: block;
-    border-radius: 50%;
-    margin-bottom: 15.4px;
-    cursor: pointer;
-    position: relative;
-
-    &_active:before {
-      position: absolute;
-      content: '';
-      width: 14px;
-      height: 14px;
-      border: 1px solid $white;
-      border-radius: 50%;
-      transform: translateX(-30%) translateY(-30%);
-    }
-  }
-}
 
 .header {
   width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-
-  //position: absolute;
-  //left: 50%;
-  //transform: translateX(-50%) translateY(0);
-  //min-width: 940px;
 }
 
 .header__logo {
   margin-right:auto;
-
 }
 
 .logo-svg {
-  width: 91px;
-  height: 69px;
+  width: rem(91px);
+  height: rem(69px);
   display: block;
-  margin-top: 11px;
+  margin-top: rem(11px);
+}
+
+.nav {
+  margin-right: rem(17px);
+  margin-top: rem(8px);
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__link {
+  color: $white;
+  text-decoration: none;
+  transition: .5s;
+  font-family: ubuntu-medium, sans-serif;
+  font-size: rem(13px);
+  text-transform: uppercase;
+  line-height: 1.42;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.nav__item{
+  &:last-child {
+    align-self: center;
+    .nav__link:after{
+      display: none;
+    }
+  }
+}
+
+.nav__link {
+  color: $white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  &:after {
+    content:'';
+    display: block;
+    width: rem(4px);
+    height: rem(4px);
+    @include circle( rem(4px), $white);
+    margin: rem(15.7px);
+  }
 
 }
 
 
-.navigation {
-  margin-right: rem(16px);
-  margin-top: 4px;
-
-  &__item {
-    display: inline-block;
-    vertical-align: middle;
-    white-space: nowrap;
-
-    &:nth-child(-n+5):after {
-      display: inline-block;
-      content: '';
-      @include circle(4px, $white);
-      vertical-align: middle;
-      margin: 0 12.4px;
-    }
-
-  }
-
-  &__item:last-child{
-    //padding-right:2px;
-  }
-
-  &__link {
-    color: $white;
-    text-decoration: none;
-    transition: .5s;
-    font-family: ubuntu-medium, sans-serif;
-    font-size: 13px;
-    text-transform: uppercase;
-    line-height: 1.42;
-    display: inline-block;
-    vertical-align: middle;
-
-    &:hover {
-      text-decoration: underline;
-    }
-
-  }
-
-}
-
-.button {
+.header__button {
   @include button();
+  padding: rem(6px) rem(15px);
+  text-align: center;
 }
 
 .header__btn {
-  padding: 0;
-  margin: 7px -3px 0 0;
+  margin: rem(7px) rem(-3px) 0 rem(-3px);
+}
+
+
+.toggle_mnu {
+  width: rem(24px);
+  height: rem(24px);
+  z-index: 5;
+  border: none;
+  cursor: pointer;
+  margin-top: rem(5px);
+  margin-left: rem(31px);
+  position: relative;
+  background-color: transparent;
+  display: none;
+
+  @include tablets {
+    display: flex;
+  }
+
+}
+
+.sandwich {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 60;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sw-topper,.sw-bottom,.sw-footer {
+  display: block;
+  width: 100%;
+  height: rem(4px);
+  background: $white;
+  border: none;
+  border-radius: rem(4px) rem(4px) rem(4px) rem(4px);
+  transition: transform 0.5s, top 0.2s;
+  transition-delay: 0.2s, 0s;
 }
 
 
 .first {
-  background-image: url('https://codeman23.github.io/mburger/img/first_bg.jpg');
-  background-repeat: no-repeat;
-  background-position: 50%;
+  background: url('https://codeman23.github.io/mburger/img/first_bg.jpg') no-repeat center center;
   background-size: cover;
-  position: relative;
-
-  &__container {
-    height: 100%;
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items:center;
-
-  }
-
-
-  &__info {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-grow:1;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 93px;
-
-  }
-
-  &__desc {
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  &__photo {
-    width: 454px;
-    height: 426px;
-    padding-left: 16px;
-    //margin: 0 0 0 -25px;
-    //margin-right: 20px;
-
-  }
-
-  &__title  {
-    font-size: 72px;
-    color: $yellow;
-    display: inline-block;
-    line-height: 1.7  ;
-    margin-left: 13px;
-    padding-top: 46px;
-  }
-
-  &__text {
-    font-size: 65px;
-    font-family: lifehackmedium,sans-serif;
-    color: $white;
-    line-height: 58px;
-    letter-spacing: -1.6px;
-    margin-left: 13px;
-  }
-
-  &__scroll {
-    display: flex;
-    justify-content: center;
-  }
-
-  &__scroll-icon {
-    font-family: svgfont_1regular, sans-serif;
-    color: $white;
-    font-size: 28px;
-    display: block;
-    margin-left: 7px;
-    cursor: pointer;
-  }
-
 }
+
+.first__container {
+  flex:1;
+}
+
+
+.first__info {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  //flex-grow:1;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+
+  @include tablets {
+    align-content: flex-start;
+  }
+}
+
 .first__photo, .first__desc {
-  flex-basis: 50%;
+  width: 50%;
   display: flex;
 }
+
+.first__desc {
+  flex-direction: column;
+  justify-content: center;
+
+  @include tablets {
+    //flex-basis: 50%;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+.first__photo {
+  max-width: rem(454px);
+  max-height: rem(426px);
+  padding-left: rem(16px);
+
+  @include tablets {
+    margin-left: 0;
+    width: rem(454px);
+    height: rem(426px);
+  }
+
+  @include phones {
+    width: rem(362px);
+    height: rem(339px);
+  }
+}
+
+.first__title  {
+  font-size: rem(72px);
+  line-height: 1.7;
+  margin-left: rem(13px);
+  padding-top: rem(46px);
+  width: 100%;
+
+  @include tablets {
+    width: rem(550px);
+  }
+
+  @include phones {
+    font-size: rem(63px);
+    width: 336px;
+    line-height: 0.9;
+  }
+
+
+}
+
+.first__text {
+  font-size: rem(65px);
+  font-family: lifehackmedium,sans-serif;
+  color: $white;
+  line-height: rem(58px);
+  letter-spacing: rem(-1.6px);
+  margin-left: rem(13px);
+
+  @include phones {
+    font-size: rem(54px);
+    line-height: rem(62px);
+  }
+
+}
+
+.first__scroll {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 6%;
+}
+
+.first__scroll-icon {
+  font-family: svgfont_1regular, sans-serif;
+  color: $white;
+  font-size: rem(28px);
+  display: block;
+  margin-left: rem(7px);
+  cursor: pointer;
+  text-decoration: none;
+}
+
 
