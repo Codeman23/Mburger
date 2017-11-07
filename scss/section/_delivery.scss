@@ -1,10 +1,14 @@
+
+
 .delivery {
   background: url('https://codeman23.github.io/mburger/img/delivery_bg.jpg') no-repeat center center;
   background-size: cover;
+  justify-content: center;
 }
 
 .delivery__title {
-  padding-bottom: rem(76px);
+  padding-top: rem(50px);
+  padding-bottom: rem(50px);
   font-size: rem(72px);
   text-align: center;
   line-height: 1.1;
@@ -14,6 +18,10 @@
     text-align: center;
     padding-bottom: rem(30px);
   }
+
+  @media screen and(max-height: 650px) {
+    font-size: rem(50px);
+  }
 }
 
 .form__wrap {
@@ -22,6 +30,7 @@
   width: 100%;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-bottom: rem(50px);
 
   @include tablets {
     flex-direction: column;

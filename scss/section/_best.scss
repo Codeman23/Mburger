@@ -1,6 +1,7 @@
 .best {
   background: url('https://codeman23.github.io/mburger/img/best_bg.jpg') no-repeat center center;
   background-size: cover;
+  justify-content: center;
 }
 
 .best__title {
@@ -14,6 +15,15 @@
     font-size: rem(50px);
     margin-bottom: rem(65px);
   }
+
+  @media screen and(max-height: 650px) {
+    font-size: rem(50px);
+  }
+
+}
+
+.best__container {
+  padding: 70px 0;
 }
 
 .best__content {
@@ -94,10 +104,7 @@
 .content-item__text {
   font-size: rem(14px);
 
-
-
 }
-
 
 .content-item__title {
   font-family: lifehackmedium,sans-serif;

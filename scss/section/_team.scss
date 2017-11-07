@@ -33,10 +33,11 @@
   right: 0;
   width: 50%;
   background: rgba(#2f3234, .95);
-  padding-left: rem(70px);
+  //padding-left: rem(70px);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  padding: rem(40px) 0 70px rem(70px);
 
   @include tablets {
     width: 100%;
@@ -45,7 +46,7 @@
 }
 
 .team__content {
-  margin-top: 20%;
+  //margin-top: 20%;
 
   @include tablets {
     display: flex;
@@ -53,7 +54,7 @@
     align-items: center;
     justify-content: center;
 
-    margin-top: rem(66px);
+    //margin-top: rem(66px);
   }
 }
 
@@ -81,11 +82,16 @@
 .team__title {
   font-size: rem(72px);
   color: $yellow;
-  margin-bottom: rem(103px);
+  margin-top: rem(50px);
+  margin-bottom: rem(80px);
 
   @include phones {
+    font-size: 50px;
+    //margin-bottom: rem(103px);
+  }
+
+  @media screen and(max-height: 650px) {
     font-size: rem(50px);
-    margin-bottom: rem(103px);
   }
 }
 
@@ -194,3 +200,4 @@
   }
 
 }
+

@@ -1,4 +1,17 @@
 
+.first {
+  background: url('https://codeman23.github.io/mburger/img/first_bg.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+.first__container {
+  flex:1;
+  //justify-content: flex-start;
+}
+
+
+
 .header {
   width: 100%;
   display: flex;
@@ -127,24 +140,14 @@
 }
 
 
-.first {
-  background: url('https://codeman23.github.io/mburger/img/first_bg.jpg') no-repeat center center;
-  background-size: cover;
-}
-
-.first__container {
-  flex:1;
-}
-
-
 .first__info {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  //flex-grow:1;
   flex: 1;
   align-items: center;
   justify-content: center;
+  margin-bottom: rem(100px);
 
   @include tablets {
     align-content: flex-start;
@@ -154,6 +157,13 @@
 .first__photo, .first__desc {
   width: 50%;
   display: flex;
+  float: left;
+
+
+  @include tablets() {
+    float: none;
+    width: auto;
+  }
 }
 
 .first__desc {
@@ -182,6 +192,12 @@
     width: rem(362px);
     height: rem(339px);
   }
+
+  @media screen and(max-height: 650px) {
+    width: rem(362px);
+    height: rem(339px);
+  }
+
 }
 
 .first__title  {
@@ -196,6 +212,12 @@
   }
 
   @include phones {
+    font-size: rem(63px);
+    width: 336px;
+    line-height: 0.9;
+  }
+
+  @media screen and(max-height: 650px) {
     font-size: rem(63px);
     width: 336px;
     line-height: 0.9;
@@ -235,5 +257,4 @@
   cursor: pointer;
   text-decoration: none;
 }
-
 
