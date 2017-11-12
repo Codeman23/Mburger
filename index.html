@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru-RU">
 
@@ -20,11 +21,68 @@
 
 	<div class="main-content">
 
+		<div class="pages__wrap">
+			<ul class="pages">
+				<li class="pages__switch">
+					<a href="#" class="pages__link"><span class="pages__point pages__point_active"></span></a>
+				</li>
+				<li class="pages__switch">
+					<a href="#" class="pages__link"><span class="pages__point"></span></a>
+				</li>
+				<li class="pages__switch">
+					<a href="#" class="pages__link"><span class="pages__point"></span></a>
+				</li>
+				<li class="pages__switch">
+					<a href="#" class="pages__link"><span class="pages__point"></span></a>
+				</li>
+				<li class="pages__switch">
+					<a href="#" class="pages__link "><span class="pages__point"></span></a>
+				</li>
+				<li class="pages__switch">
+					<a href="#" class="pages__link"><span class="pages__point"></span></a>
+				</li>
+				<li class="pages__switch">
+					<a href="#" class="pages__link"><span class="pages__point"></span></a>
+				</li>
+				<li class="pages__switch">
+					<a href="#" class="pages__link"><span class="pages__point"></span></a>
+				</li>
+			</ul>
+		</div>
+
 		<div class="section first section_centered">
+
+			<div class="header__hidden-menu">
+				<nav class="hidden-nav">
+
+					<ul class="hidden-nav__list">
+						<li class="hidden-nav__item">
+							<a class="hidden-nav__link" href="#" data-goto="1" >Почему мы</a>
+						</li>
+						<li class="hidden-nav__item">
+							<a class="hidden-nav__link" href="#" data-goto="2" >Меню</a>
+						</li>
+						<li class="hidden-nav__item">
+							<a class="hidden-nav__link" href="#" data-goto="3" >Советы</a>
+						</li>
+						<li class="hidden-nav__item">
+							<a class="hidden-nav__link" href="#" data-goto="4" >Кто мы</a>
+						</li>
+						<li class="hidden-nav__item">
+							<a class="hidden-nav__link" href="#" data-goto="5" >Свяжитесь с нами</a>
+						</li>
+						<li class="hidden-nav__item">
+							<a class="hidden-nav__link" href="#" data-goto="7" >Контакты</a>
+						</li>
+					</ul>
+				</nav>
+
+
+			</div>
 
 			<div class="container first__container">
 
-				<header class='header'>
+				<header class="header">
 
 					<a href="index.html" class="header__logo">
 						<img class="logo-svg" src="https://codeman23.github.io/mburger/svg/logo.svg" alt="лого компании">
@@ -56,19 +114,20 @@
 							</ul>
 
 						</nav>
+
 					</div>
 
 					<div class="header__btn">
 						<a class="button header__button" href="#" data-goto="6">Заказать</a>
 					</div>
 
-					<button class="toggle_mnu">
+					<div class="toggle_mnu">
 						<span class="sandwich">
 							<span class="sw-topper"></span>
 							<span class="sw-bottom"></span>
 							<span class="sw-footer"></span>
 						</span>
-					</button>
+					</div>
 
 				</header>
 
@@ -127,6 +186,80 @@
 
 		</section>
 
+		<section class="section burgers">
+			<div class="burgers__controls">
+				<span class="control_left">o</span>
+				<span class="control_right">p</span>
+			</div>
+
+			<div class="container burgers__container">
+
+				<div class="burgers__info">
+
+					<div class="burgers__tovar">
+						<div class="burgers__consist">
+							<div class="consist__button">
+								<span class="consist__icon">e</span>
+								<span class="consist__title">состав</span>
+							</div>
+							<ul class="burgers__hover">
+								<li class="hover__ingrid">
+									<span class="hover__icon hover__icon_red">g</span>
+									<span class="hover__title">Говядина</span>
+									<span class="hover__gr">300 г.</span>
+								</li>
+								<li class="hover__ingrid">
+									<span class="hover__icon hover__icon_yellow">h</span>
+									<span class="hover__title">Булочки</span>
+									<span class="hover__gr">100 г.</span>
+								</li>
+								<li class="hover__ingrid">
+									<span class="hover__icon hover__icon_green">i</span>
+									<span class="hover__title">Зелень</span>
+									<span class="hover__gr">70 г.</span>
+								</li>
+								<li class="hover__ingrid">
+									<span class="hover__icon hover__icon_red">j</span>
+									<span class="hover__title">Соус</span>
+									<span class="hover__gr">150 г.</span>
+								</li>
+								<li class="hover__ingrid">
+									<span class="hover__icon hover__icon_green">k</span>
+									<span class="hover__title">Овощи</span>
+									<span class="hover__gr">200 г.</span>
+								</li>
+								<li class="hover__ingrid">
+									<span class="hover__icon hover__icon_yellow">l</span>
+									<span class="hover__title">Cыр</span>
+									<span class="hover__gr">80 г.</span>
+								</li>
+							</ul>
+						</div>
+						<img src="https://codeman23.github.io/mburger/img/slburgers.png" alt="slburgers" class="burgers__photo">
+						<div class="burgers__calories">
+							<span class="calories__icon">m</span>
+							<span class="calories__text">1200</span>
+							<span class="calories__kkl">ккал</span>
+						</div>
+					</div>
+
+					<div class="burgers__desc">
+						<h2 class="title burgers__title">Dark beef burger</h2>
+						<span class="burgers__text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</span>
+						<div class="burgers__sell">
+							<span class="burgers__coast">500</span>
+							<span class="burgers__rub">рублей</span>
+							<div class="burgers__btn">
+								<a class="button burgers__button" href="#" data-goto="6">Заказать</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+
 		<section class="section reviews">
 
 			<ul class="reviews__list">
@@ -136,8 +269,7 @@
 						<div class="review__photo" style="background-image: url('https://codeman23.github.io/mburger/img/photo_1.jpg')"></div>
 						<div class="review__hover">
 							<h5 class="review__title">Константин Спилберг</h5>
-							<div class="review__shorttext">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
-								могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+							<div class="review__shorttext">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
 							<button class="reviews__button">Подробнее</button>
 						</div>
 					</div>
@@ -147,8 +279,7 @@
 						<div class="review__photo" style="background-image: url('https://codeman23.github.io/mburger/img/photo_2.jpg')"></div>
 						<div class="review__hover">
 							<h5 class="review__title">Константин Спилберг</h5>
-							<div class="review__shorttext">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
-								могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+							<div class="review__shorttext">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
 							<button class="reviews__button">Подробнее</button>
 						</div>
 					</div>
@@ -158,8 +289,7 @@
 						<div class="review__photo" style="background-image: url('https://codeman23.github.io/mburger/img/photo_3.jpg')"></div>
 						<div class="review__hover">
 							<h5 class="review__title">Константин Спилберг</h5>
-							<div class="review__shorttext">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
-								могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+							<div class="review__shorttext">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
 							<button class="reviews__button">Подробнее</button>
 						</div>
 					</div>
@@ -169,8 +299,7 @@
 						<div class="review__photo" style="background-image: url('https://codeman23.github.io/mburger/img/photo_4.jpg')"></div>
 						<div class="review__hover">
 							<h5 class="review__title">Константин Спилберг</h5>
-							<div class="review__shorttext">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
-								могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+							<div class="review__shorttext">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
 							<button class="reviews__button">Подробнее</button>
 						</div>
 					</div>
@@ -180,8 +309,7 @@
 						<div class="review__photo" style="background-image: url('https://codeman23.github.io/mburger/img/photo_5.jpg')"></div>
 						<div class="review__hover">
 							<h5 class="review__title">Константин Спилберг</h5>
-							<div class="review__shorttext">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
-								могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+							<div class="review__shorttext">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
 							<button class="reviews__button">Подробнее</button>
 						</div>
 					</div>
@@ -191,8 +319,7 @@
 						<div class="review__photo" style="background-image: url('https://codeman23.github.io/mburger/img/photo_6.jpg')"></div>
 						<div class="review__hover">
 							<h5 class="review__title">Константин Спилберг</h5>
-							<div class="review__shorttext">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
-								могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+							<div class="review__shorttext">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
 							<button class="reviews__button">Подробнее</button>
 						</div>
 					</div>
@@ -202,8 +329,7 @@
 						<div class="review__photo" style="background-image: url('https://codeman23.github.io/mburger/img/photo_7.jpg')"></div>
 						<div class="review__hover">
 							<h5 class="review__title">Константин Спилберг</h5>
-							<div class="review__shorttext">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
-								могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+							<div class="review__shorttext">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
 							<button class="reviews__button">Подробнее</button>
 						</div>
 					</div>
@@ -213,8 +339,7 @@
 						<div class="review__photo" style="background-image: url('https://codeman23.github.io/mburger/img/photo_8.jpg')"></div>
 						<div class="review__hover">
 							<h5 class="review__title">Константин Спилберг</h5>
-							<div class="review__shorttext">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
-								могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+							<div class="review__shorttext">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
 							<button class="reviews__button">Подробнее</button>
 						</div>
 					</div>
@@ -236,7 +361,7 @@
 						<li class="team__item">
 							<a class="mate__title">Дэниэл Редклиф</a>
 							<div class="mate__desc">
-								<img src="/img/mate.jpg" alt="" class="mate__photo">
+								<img src="https://codeman23.github.io/mburger/img/mate.jpg" alt="" class="mate__photo">
 								<div class="mate__info">
 									<div class="mate__post">Оператор</div>
 									<div class="mate__text"><p>С радостью поможет подобрать идеальный бургер и оформить заказ.</p></div>
@@ -247,7 +372,7 @@
 						<li class="team__item team__item_active">
 							<a class="mate__title">Ричард Джеймс</a>
 							<div class="mate__desc">
-								<img src="/img/mate.jpg" alt="" class="mate__photo">
+								<img src="https://codeman23.github.io/mburger/img/mate.jpg" alt="" class="mate__photo">
 								<div class="mate__info">
 									<div class="mate__post">Оператор</div>
 									<div class="mate__text"><p>С радостью поможет подобрать идеальный бургер и оформить заказ.</p></div>
@@ -258,7 +383,7 @@
 						<li class="team__item">
 							<a class="mate__title">Джейк Финн</a>
 							<div class="mate__desc">
-								<img src="/img/mate.jpg" alt="" class="mate__photo">
+								<img src="https://codeman23.github.io/mburger/img/mate.jpg" alt="" class="mate__photo">
 								<div class="mate__info">
 									<div class="mate__post">Оператор</div>
 									<div class="mate__text"><p>С радостью поможет подобрать идеальный бургер и оформить заказ.</p></div>
@@ -269,7 +394,7 @@
 						<li class="team__item">
 							<a class="mate__title">Николай Иванов</a>
 							<div class="mate__desc">
-								<img src="/img/mate.jpg" alt="" class="mate__photo">
+								<img src="https://codeman23.github.io/mburger/img/mate.jpg" alt="" class="mate__photo">
 								<div class="mate__info">
 									<div class="mate__post">Оператор</div>
 									<div class="mate__text"><p>С радостью поможет подобрать идеальный бургер и оформить заказ.</p></div>
@@ -455,39 +580,11 @@
 			</footer>
 		</div>
 
-
-		<div class="pages__wrap">
-			<ul class="pages">
-				<li class="pages__switch">
-					<a href="" class="pages__link"><span class="pages__point pages__point_active"></span></a>
-				</li>
-				<li class="pages__switch">
-					<a href="" class="pages__link"><span class="pages__point"></span></a>
-				</li>
-				<li class="pages__switch">
-					<a href="" class="pages__link"><span class="pages__point"></span></a>
-				</li>
-				<li class="pages__switch">
-					<a href="" class="pages__link"><span class="pages__point"></span></a>
-				</li>
-				<li class="pages__switch">
-					<a href="" class="pages__link "><span class="pages__point"></span></a>
-				</li>
-				<li class="pages__switch">
-					<a href="" class="pages__link"><span class="pages__point"></span></a>
-				</li>
-				<li class="pages__switch">
-					<a href="" class="pages__link"><span class="pages__point"></span></a>
-				</li>
-				<li class="pages__switch">
-					<a href="" class="pages__link"><span class="pages__point"></span></a>
-				</li>
-			</ul>
-		</div>
-
 	</div>
 
 </div>
+
+<script src="https://codeman23.github.io/mburger/js/common.js"></script>
 
 </body>
 
