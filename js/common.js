@@ -121,7 +121,7 @@ jQuery(document).ready(function () {
     $('.control_left').on('click', function () {
         slider.goToPrevSlide();
     });
-    
+
 
     //======================================================ПОДКЛЮЧЕНИЕ ПЛАГИНА One page scroll=======================================================================//
 
@@ -219,7 +219,7 @@ jQuery(document).ready(function () {
 
     function initMap(){
         var element = document.getElementById('contacts__map');
-        var image = '/svg/map-marker.svg';
+        var image = 'https://codeman23.github.io/mburger/svg/map-marker.svg';
         var options = {
             zoom: 15,
             center: {lat: 59.939095, lng: 30.315868}
