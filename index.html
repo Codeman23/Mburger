@@ -8,6 +8,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<link href="https://codeman23.github.io/mburger/css/normalize.css" type="text/css" rel="stylesheet" />
+	<link href="https://codeman23.github.io/mburger/css/jquery.bxslider.css" type="text/css" rel="stylesheet" />
+	<link href="https://codeman23.github.io/mburger/css/onepage-scroll.css" type="text/css" rel="stylesheet" />
 	<link href="https://codeman23.github.io/mburger/css/main.css" type="text/css" rel="stylesheet" />
 
 	<title>Mb</title>
@@ -19,60 +21,36 @@
 
 <div class="wrapper">
 
-	<div class="main-content">
+	<div class="main-content main">
 
 		<div class="pages__wrap">
-			<ul class="pages">
-				<li class="pages__switch">
-					<a href="#" class="pages__link"><span class="pages__point pages__point_active"></span></a>
-				</li>
-				<li class="pages__switch">
-					<a href="#" class="pages__link"><span class="pages__point"></span></a>
-				</li>
-				<li class="pages__switch">
-					<a href="#" class="pages__link"><span class="pages__point"></span></a>
-				</li>
-				<li class="pages__switch">
-					<a href="#" class="pages__link"><span class="pages__point"></span></a>
-				</li>
-				<li class="pages__switch">
-					<a href="#" class="pages__link "><span class="pages__point"></span></a>
-				</li>
-				<li class="pages__switch">
-					<a href="#" class="pages__link"><span class="pages__point"></span></a>
-				</li>
-				<li class="pages__switch">
-					<a href="#" class="pages__link"><span class="pages__point"></span></a>
-				</li>
-				<li class="pages__switch">
-					<a href="#" class="pages__link"><span class="pages__point"></span></a>
-				</li>
-			</ul>
+
+			<ul class="pages"></ul>
 		</div>
 
-		<div class="section first section_centered">
+		<div class="section first section_centered active">
 
 			<div class="header__hidden-menu">
 				<nav class="hidden-nav">
 
 					<ul class="hidden-nav__list">
 						<li class="hidden-nav__item">
-							<a class="hidden-nav__link" href="#" data-goto="1" >Почему мы</a>
+							<a class="hidden-nav__link" href="#best">Почему мы</a>
 						</li>
 						<li class="hidden-nav__item">
-							<a class="hidden-nav__link" href="#" data-goto="2" >Меню</a>
+							<a class="hidden-nav__link" href="#menu">Меню</a>
 						</li>
 						<li class="hidden-nav__item">
-							<a class="hidden-nav__link" href="#" data-goto="3" >Советы</a>
+							<a class="hidden-nav__link" href="#reviews">Советы</a>
 						</li>
 						<li class="hidden-nav__item">
-							<a class="hidden-nav__link" href="#" data-goto="4" >Кто мы</a>
+							<a class="hidden-nav__link" href="#team">Кто мы</a>
 						</li>
 						<li class="hidden-nav__item">
-							<a class="hidden-nav__link" href="#" data-goto="5" >Свяжитесь с нами</a>
+							<a class="hidden-nav__link" href="#delivery">Свяжитесь с нами</a>
 						</li>
 						<li class="hidden-nav__item">
-							<a class="hidden-nav__link" href="#" data-goto="7" >Контакты</a>
+							<a class="hidden-nav__link" href="#contacts">Контакты</a>
 						</li>
 					</ul>
 				</nav>
@@ -94,22 +72,22 @@
 
 							<ul class="nav__list">
 								<li class="nav__item">
-									<a class="nav__link" href="#" data-goto="1" >О нас</a>
+									<a class="nav__link" href="#">О нас</a>
 								</li>
 								<li class="nav__item">
-									<a class="nav__link" href="#" data-goto="2" >Бургеры</a>
+									<a class="nav__link" href="#">Бургеры</a>
 								</li>
 								<li class="nav__item">
-									<a class="nav__link" href="#" data-goto="3" >Команда</a>
+									<a class="nav__link" href="#">Команда</a>
 								</li>
 								<li class="nav__item">
-									<a class="nav__link" href="#" data-goto="4" >Меню</a>
+									<a class="nav__link" href="#">Меню</a>
 								</li>
 								<li class="nav__item">
-									<a class="nav__link" href="#" data-goto="5" >Отзывы</a>
+									<a class="nav__link" href="#">Отзывы</a>
 								</li>
 								<li class="nav__item">
-									<a class="nav__link" href="#" data-goto="7" >Контакты</a>
+									<a class="nav__link" href="#">Контакты</a>
 								</li>
 							</ul>
 
@@ -118,7 +96,7 @@
 					</div>
 
 					<div class="header__btn">
-						<a class="button header__button" href="#" data-goto="6">Заказать</a>
+						<a class="button header__button" href="#delivery" >Заказать</a>
 					</div>
 
 					<div class="toggle_mnu">
@@ -187,77 +165,150 @@
 		</section>
 
 		<section class="section burgers">
+
 			<div class="burgers__controls">
 				<span class="control_left">o</span>
 				<span class="control_right">p</span>
 			</div>
 
-			<div class="container burgers__container">
+			<ul class="bx-slider">
+				<li class="bx-slider__item">
+					<div class="container burgers__container">
 
-				<div class="burgers__info">
+						<div class="burgers__info">
 
-					<div class="burgers__tovar">
-						<div class="burgers__consist">
-							<div class="consist__button">
-								<span class="consist__icon">e</span>
-								<span class="consist__title">состав</span>
+							<div class="burgers__tovar">
+								<div class="burgers__consist">
+									<div class="consist__button">
+										<span class="consist__icon">e</span>
+										<span class="consist__title">состав</span>
+									</div>
+									<ul class="burgers__hover">
+										<li class="hover__ingrid">
+											<span class="hover__icon hover__icon_red">g</span>
+											<span class="hover__title">Говядина</span>
+											<span class="hover__gr">300 г.</span>
+										</li>
+										<li class="hover__ingrid">
+											<span class="hover__icon hover__icon_yellow">h</span>
+											<span class="hover__title">Булочки</span>
+											<span class="hover__gr">100 г.</span>
+										</li>
+										<li class="hover__ingrid">
+											<span class="hover__icon hover__icon_green">i</span>
+											<span class="hover__title">Зелень</span>
+											<span class="hover__gr">70 г.</span>
+										</li>
+										<li class="hover__ingrid">
+											<span class="hover__icon hover__icon_red">j</span>
+											<span class="hover__title">Соус</span>
+											<span class="hover__gr">150 г.</span>
+										</li>
+										<li class="hover__ingrid">
+											<span class="hover__icon hover__icon_green">k</span>
+											<span class="hover__title">Овощи</span>
+											<span class="hover__gr">200 г.</span>
+										</li>
+										<li class="hover__ingrid">
+											<span class="hover__icon hover__icon_yellow">l</span>
+											<span class="hover__title">Cыр</span>
+											<span class="hover__gr">80 г.</span>
+										</li>
+									</ul>
+								</div>
+								<img src="https://codeman23.github.io/mburger/img/slburgers.png" alt="slburgers" class="burgers__photo">
+								<div class="burgers__calories">
+									<span class="calories__icon">m</span>
+									<span class="calories__text">1200</span>
+									<span class="calories__kkl">ккал</span>
+								</div>
 							</div>
-							<ul class="burgers__hover">
-								<li class="hover__ingrid">
-									<span class="hover__icon hover__icon_red">g</span>
-									<span class="hover__title">Говядина</span>
-									<span class="hover__gr">300 г.</span>
-								</li>
-								<li class="hover__ingrid">
-									<span class="hover__icon hover__icon_yellow">h</span>
-									<span class="hover__title">Булочки</span>
-									<span class="hover__gr">100 г.</span>
-								</li>
-								<li class="hover__ingrid">
-									<span class="hover__icon hover__icon_green">i</span>
-									<span class="hover__title">Зелень</span>
-									<span class="hover__gr">70 г.</span>
-								</li>
-								<li class="hover__ingrid">
-									<span class="hover__icon hover__icon_red">j</span>
-									<span class="hover__title">Соус</span>
-									<span class="hover__gr">150 г.</span>
-								</li>
-								<li class="hover__ingrid">
-									<span class="hover__icon hover__icon_green">k</span>
-									<span class="hover__title">Овощи</span>
-									<span class="hover__gr">200 г.</span>
-								</li>
-								<li class="hover__ingrid">
-									<span class="hover__icon hover__icon_yellow">l</span>
-									<span class="hover__title">Cыр</span>
-									<span class="hover__gr">80 г.</span>
-								</li>
-							</ul>
-						</div>
-						<img src="https://codeman23.github.io/mburger/img/slburgers.png" alt="slburgers" class="burgers__photo">
-						<div class="burgers__calories">
-							<span class="calories__icon">m</span>
-							<span class="calories__text">1200</span>
-							<span class="calories__kkl">ккал</span>
+
+							<div class="burgers__desc">
+								<h2 class="title burgers__title">Dark beef burger</h2>
+								<span class="burgers__text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</span>
+								<div class="burgers__sell">
+									<span class="burgers__coast">500</span>
+									<span class="burgers__rub">рублей</span>
+									<div class="burgers__btn">
+										<a class="button burgers__button" href="#" data-goto="6">Заказать</a>
+									</div>
+								</div>
+							</div>
+
 						</div>
 					</div>
+				</li>
+				<li class="bx-slider__item">
+					<div class="container burgers__container">
 
-					<div class="burgers__desc">
-						<h2 class="title burgers__title">Dark beef burger</h2>
-						<span class="burgers__text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</span>
-						<div class="burgers__sell">
-							<span class="burgers__coast">500</span>
-							<span class="burgers__rub">рублей</span>
-							<div class="burgers__btn">
-								<a class="button burgers__button" href="#" data-goto="6">Заказать</a>
+						<div class="burgers__info">
+
+							<div class="burgers__tovar">
+								<div class="burgers__consist">
+									<div class="consist__button">
+										<span class="consist__icon">e</span>
+										<span class="consist__title">состав</span>
+									</div>
+									<ul class="burgers__hover">
+										<li class="hover__ingrid">
+											<span class="hover__icon hover__icon_red">g</span>
+											<span class="hover__title">Говядина</span>
+											<span class="hover__gr">300 г.</span>
+										</li>
+										<li class="hover__ingrid">
+											<span class="hover__icon hover__icon_yellow">h</span>
+											<span class="hover__title">Булочки</span>
+											<span class="hover__gr">100 г.</span>
+										</li>
+										<li class="hover__ingrid">
+											<span class="hover__icon hover__icon_green">i</span>
+											<span class="hover__title">Зелень</span>
+											<span class="hover__gr">70 г.</span>
+										</li>
+										<li class="hover__ingrid">
+											<span class="hover__icon hover__icon_red">j</span>
+											<span class="hover__title">Соус</span>
+											<span class="hover__gr">150 г.</span>
+										</li>
+										<li class="hover__ingrid">
+											<span class="hover__icon hover__icon_green">k</span>
+											<span class="hover__title">Овощи</span>
+											<span class="hover__gr">200 г.</span>
+										</li>
+										<li class="hover__ingrid">
+											<span class="hover__icon hover__icon_yellow">l</span>
+											<span class="hover__title">Cыр</span>
+											<span class="hover__gr">80 г.</span>
+										</li>
+									</ul>
+								</div>
+								<img src="https://codeman23.github.io/mburger/img/slburgers2.png" alt="slburgers2" class="burgers__photo">
+								<div class="burgers__calories">
+									<span class="calories__icon">m</span>
+									<span class="calories__text">1200</span>
+									<span class="calories__kkl">ккал</span>
+								</div>
 							</div>
+
+							<div class="burgers__desc">
+								<h2 class="title burgers__title">Dark beef burger</h2>
+								<span class="burgers__text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</span>
+								<div class="burgers__sell">
+									<span class="burgers__coast">500</span>
+									<span class="burgers__rub">рублей</span>
+									<div class="burgers__btn">
+										<a class="button burgers__button" href="#" data-goto="6">Заказать</a>
+									</div>
+								</div>
+							</div>
+
 						</div>
 					</div>
+				</li>
+			</ul>
 
-				</div>
 
-			</div>
 		</section>
 
 		<section class="section reviews">
@@ -278,8 +329,8 @@
 					<div class="review">
 						<div class="review__photo" style="background-image: url('https://codeman23.github.io/mburger/img/photo_2.jpg')"></div>
 						<div class="review__hover">
-							<h5 class="review__title">Константин Спилберг</h5>
-							<div class="review__shorttext">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+							<h5 class="review__title">Николай Смирнов</h5>
+							<div class="review__shorttext">O все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
 							<button class="reviews__button">Подробнее</button>
 						</div>
 					</div>
@@ -346,6 +397,29 @@
 				</li>
 			</ul>
 
+			<div class="reviews__modal-wrap">
+				<div class="reviews__modal-bg">
+					<div class="reviews__modal">
+						<div class="modal__svg-wrap">
+							<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="15px" height="15px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+							viewBox="0 0 3000 3000">
+						 <g id="modal-svg">
+						  	<path class="fil0" d="M2826 2243c78,75 127,181 127,299 0,229 -186,415 -415,415 -131,0 -247,-60 -323,-154l-718 -718 -734 734 -2 -2c-76,84 -186,137 -308,137 -229,0 -415,-186 -415,-415 0,-134 64,-254 163,-330l710 -710 -735 -735 2 -2c-84,-76 -137,-186 -137,-308 0,-229 186,-415 415,-415 134,0 254,64 330,163l711 711 744 -744 0 0c75,-78 181,-127 299,-127 229,0 415,186 415,415 0,131 -60,247 -154,323l-719 719 743 743 0 0z"/>
+						 </g>
+						</svg>
+						</div>
+						<h5 class="modal__title">Константин Спилберг</h5>
+						<div class="modal__text">
+							<p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
+								Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
+								Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
+								Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
 		</section>
 
 		<section class="section team">
@@ -358,7 +432,7 @@
 
 					<ul class="team__accord">
 
-						<li class="team__item">
+						<li class="team__item team__item_active">
 							<a class="mate__title">Дэниэл Редклиф</a>
 							<div class="mate__desc">
 								<img src="https://codeman23.github.io/mburger/img/mate.jpg" alt="" class="mate__photo">
@@ -369,7 +443,7 @@
 							</div>
 						</li>
 
-						<li class="team__item team__item_active">
+						<li class="team__item">
 							<a class="mate__title">Ричард Джеймс</a>
 							<div class="mate__desc">
 								<img src="https://codeman23.github.io/mburger/img/mate.jpg" alt="" class="mate__photo">
@@ -425,10 +499,12 @@
 						<h3 class="menu__subtitle">Для мясоедов</h3>
 					</div>
 					<div class="menu__desc">
-						Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
-						однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
-						Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+						<p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
+							однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
+							Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+						</p>
 					</div>
+					<a href="#" class="menu__close"><img src="https://codeman23.github.io/mburger/svg/close.svg" alt="Закрыть" class="menu__svg"></a>
 				</li>
 
 				<li class="menu__item">
@@ -436,10 +512,12 @@
 						<h3 class="menu__subtitle">Вегитарианское</h3>
 					</div>
 					<div class="menu__desc">
-						Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
-						однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
-						Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+						<p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
+							однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
+							Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+						</p>
 					</div>
+					<a href="#" class="menu__close"><img src="https://codeman23.github.io/mburger/svg/close.svg" alt="Закрыть" class="menu__svg"></a>
 				</li>
 
 				<li class="menu__item">
@@ -447,10 +525,12 @@
 						<h3 class="menu__subtitle">Диетическое</h3>
 					</div>
 					<div class="menu__desc">
-						Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
-						однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
-						Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+						<p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
+							однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
+							Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+						</p>
 					</div>
+					<a href="#" class="menu__close"><img src="https://codeman23.github.io/mburger/svg/close.svg" alt="Закрыть" class="menu__svg"></a>
 				</li>
 			</ul>
 
@@ -558,8 +638,8 @@
 
 		</section>
 
-		<div class="section contacts">
-			<div class="contacts__map"></div>
+		<div class="section contacts" id="map">
+			<div id="contacts__map"></div>
 
 			<footer class="contacts__footer">
 				<div class="container footer__container">
@@ -584,7 +664,14 @@
 
 </div>
 
+<!--подключение js скриптов-->
+<script src="https://codeman23.github.io/mburger/js/jquery.min.js"></script>
+<script src="https://codeman23.github.io/mburger/js/jquery.bxslider.min.js"></script>
+<script src="https://codeman23.github.io/mburger/js/jquery.onepage-scroll.min.js"></script>
 <script src="https://codeman23.github.io/mburger/js/common.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDx7kTb4qWPJbxHgIp9_SuIN4QClV9qvTM&amp;callback=initMap" defer="defer"></script>
+<!--<script src="https://developers.google.com/maps/documentation/javascript/markerclusterer/markerclusterer.js"></script>-->
+
 
 </body>
 

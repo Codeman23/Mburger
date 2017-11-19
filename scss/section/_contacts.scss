@@ -1,17 +1,20 @@
 .contacts {
-  //background: #d6d6d6;
-  position: relative;
-  background: url('https://codeman23.github.io/mburger/img/map.jpg') no-repeat center center;
-  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  background: none;
 }
 
-.contacts__map {
-  //height: 100%;
-  //width: 100%;
+
+
+
+#contacts__map {
+  height: 94%;
+  width: 100%;
 }
 
 
 .contacts__footer {
+  z-index: 10;
   width: 100%;
   height: rem(60px);
   background: url('https://codeman23.github.io/mburger/img/footer_bg.jpg') repeat center center;
