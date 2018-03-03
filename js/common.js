@@ -1,202 +1,25 @@
+
 function initMap(){
-    var mapEl = document.getElementById('contacts__map');
+    var element = document.getElementById('contacts__map');
     var image = 'https://codeman23.github.io/mburger/svg/map-marker.svg';
-    var style = [
-        {
-            "featureType": "administrative.country",
-            "elementType": "geometry.stroke",
-            "stylers": [
-                {
-                    "saturation": "-19"
-                },
-                {
-                    "visibility": "on"
-                },
-                {
-                    "lightness": "32"
-                },
-                {
-                    "color": "#f28b00"
-                },
-                {
-                    "weight": "0.90"
-                }
-            ]
-        },
-        {
-            "featureType": "administrative.country",
-            "elementType": "labels.text",
-            "stylers": [
-                {
-                    "visibility": "on"
-                },
-                {
-                    "color": "#2600ff"
-                }
-            ]
-        },
-        {
-            "featureType": "administrative.country",
-            "elementType": "labels.text.fill",
-            "stylers": [
-                {
-                    "color": "#e87b5d"
-                }
-            ]
-        },
-        {
-            "featureType": "administrative.country",
-            "elementType": "labels.text.stroke",
-            "stylers": [
-                {
-                    "color": "#ffffff"
-                }
-            ]
-        },
-        {
-            "featureType": "administrative.province",
-            "elementType": "labels.text.fill",
-            "stylers": [
-                {
-                    "color": "#0847ac"
-                }
-            ]
-        },
-        {
-            "featureType": "administrative.locality",
-            "elementType": "labels.text.fill",
-            "stylers": [
-                {
-                    "color": "#004074"
-                }
-            ]
-        },
-        {
-            "featureType": "administrative.locality",
-            "elementType": "labels.text.stroke",
-            "stylers": [
-                {
-                    "color": "#ffffff"
-                }
-            ]
-        },
-        {
-            "featureType": "landscape.natural",
-            "elementType": "geometry.fill",
-            "stylers": [
-                {
-                    "saturation": "58"
-                }
-            ]
-        },
-        {
-            "featureType": "landscape.natural.landcover",
-            "elementType": "labels.text.fill",
-            "stylers": [
-                {
-                    "saturation": "45"
-                }
-            ]
-        },
-        {
-            "featureType": "road.highway",
-            "elementType": "geometry.fill",
-            "stylers": [
-                {
-                    "saturation": "100"
-                },
-                {
-                    "lightness": "-43"
-                },
-                {
-                    "gamma": "2.02"
-                },
-                {
-                    "color": "#ffe700"
-                }
-            ]
-        },
-        {
-            "featureType": "road.highway",
-            "elementType": "geometry.stroke",
-            "stylers": [
-                {
-                    "color": "#ffb200"
-                }
-            ]
-        },
-        {
-            "featureType": "water",
-            "elementType": "geometry.fill",
-            "stylers": [
-                {
-                    "color": "#53c5ee"
-                }
-            ]
-        },
-        {
-            "featureType": "water",
-            "elementType": "labels.text.fill",
-            "stylers": [
-                {
-                    "visibility": "on"
-                },
-                {
-                    "color": "#ffffff"
-                }
-            ]
-        },
-        {
-            "featureType": "water",
-            "elementType": "labels.text.stroke",
-            "stylers": [
-                {
-                    "color": "#fafafa"
-                },
-                {
-                    "visibility": "on"
-                },
-                {
-                    "weight": "2.06"
-                }
-            ]
-        }
-    ];
-
-    var uluru = {
-        lat: 59.939095,
-        lng: 30.315868
+    var options = {
+        zoom: 15,
+        center: {lat: 59.939095, lng: 30.315868}
     };
+    var myMap= new google.maps.Map(element, options);
 
-    var map = new google.maps.Map(mapEl, {
-        zoom: 12,
-        center: uluru,
-        styles: style
-    });
+    addMarker({lat: 59.939095, lng: 30.315868});
+    addMarker({lat: 59.931907, lng: 30.322082});
+    addMarker({lat: 59.939647, lng: 30.334245});
 
 
-    var locations = [
-        {lat:59.939095, lng: 30.315868},
-        {lat:59.955427, lng: 30.295793},
-        {lat:59.943803, lng: 30.367891},
-        {lat:59.924506, lng: 30.294506},
-        {lat:59.927091, lng: 30.375015}
-    ];
-
-    var markers = locations.map(function(location, i) {
-        return new google.maps.Marker({
-            position: location,
+    function addMarker(coordinates) {
+        var marker = new google.maps.Marker({
+            position: coordinates,
+            map: myMap,
             icon: image
         });
-    });
-
-    var markerCluster = new MarkerClusterer(
-        map,
-        markers,
-        {
-            imagePath: 'img/m'
-        });
-
+    }
 
     google.maps.event.addListener(map, 'mousedown', function(event){
         this.setOptions({scrollwheel:true});
@@ -204,14 +27,17 @@ function initMap(){
     google.maps.event.addListener(map, 'mouseover', function(event){
         self = this;
         timer = setTimeout(function() {
-            self.setOptions({scrollwheel:true});
-        }, 1000);
+        self.setOptions({scrollwheel:true});
+    }, 1000);
     });
     google.maps.event.addListener(map, 'mouseout', function(event){
         this.setOptions({scrollwheel:false});
         clearTimeout(timer);
-    });
+});
+
 }
+
+initMap();
 
 
 
