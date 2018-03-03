@@ -1,6 +1,6 @@
 //=========================================================================================== menu_open//
 
-window.onload = function () { //пусть страница грузанется
+window.onload = function () { //пусть страница загрузится
     var mnu = document.querySelector(".toggle_mnu"); //выберем определенный узел по классу через queryselector
     var hmenu = document.querySelector(".header__hidden-menu"); //cоздаем переменную для cпрятанного подменю чтоб отобразить его
     var sandwich = document.querySelector(".sandwich"); //cоздаем переменную для cпрятанного подменю крестик!
@@ -270,6 +270,20 @@ function initMap(){
             icon: image
         });
     }
+    
+        google.maps.event.addListener(map, 'mousedown', function(event){
+        this.setOptions({scrollwheel:true});
+    });
+    google.maps.event.addListener(map, 'mouseover', function(event){
+        self = this;
+        timer = setTimeout(function() {
+            self.setOptions({scrollwheel:true});
+        }, 1000);
+    });
+    google.maps.event.addListener(map, 'mouseout', function(event){
+        this.setOptions({scrollwheel:false});
+        clearTimeout(timer);
+    });
 
 }
 
