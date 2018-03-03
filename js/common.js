@@ -1,4 +1,3 @@
-
 function initMap(){
     var element = document.getElementById('contacts__map');
     var image = 'https://codeman23.github.io/mburger/svg/map-marker.svg';
@@ -21,24 +20,9 @@ function initMap(){
         });
     }
 
-    google.maps.event.addListener(map, 'mousedown', function(event){
-        this.setOptions({scrollwheel:true});
-    });
-    google.maps.event.addListener(map, 'mouseover', function(event){
-        self = this;
-        timer = setTimeout(function() {
-        self.setOptions({scrollwheel:true});
-    }, 1000);
-    });
-    google.maps.event.addListener(map, 'mouseout', function(event){
-        this.setOptions({scrollwheel:false});
-        clearTimeout(timer);
-});
-
 }
 
 initMap();
-
 
 
 //============================================================================================================ подключение карты google maps//
