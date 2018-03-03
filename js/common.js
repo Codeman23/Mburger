@@ -1,3 +1,223 @@
+function initMap(){
+    var mapEl = document.getElementById('contacts__map');
+    var image = 'https://codeman23.github.io/mburger/svg/map-marker.svg';
+    var style = [
+        {
+            "featureType": "administrative.country",
+            "elementType": "geometry.stroke",
+            "stylers": [
+                {
+                    "saturation": "-19"
+                },
+                {
+                    "visibility": "on"
+                },
+                {
+                    "lightness": "32"
+                },
+                {
+                    "color": "#f28b00"
+                },
+                {
+                    "weight": "0.90"
+                }
+            ]
+        },
+        {
+            "featureType": "administrative.country",
+            "elementType": "labels.text",
+            "stylers": [
+                {
+                    "visibility": "on"
+                },
+                {
+                    "color": "#2600ff"
+                }
+            ]
+        },
+        {
+            "featureType": "administrative.country",
+            "elementType": "labels.text.fill",
+            "stylers": [
+                {
+                    "color": "#e87b5d"
+                }
+            ]
+        },
+        {
+            "featureType": "administrative.country",
+            "elementType": "labels.text.stroke",
+            "stylers": [
+                {
+                    "color": "#ffffff"
+                }
+            ]
+        },
+        {
+            "featureType": "administrative.province",
+            "elementType": "labels.text.fill",
+            "stylers": [
+                {
+                    "color": "#0847ac"
+                }
+            ]
+        },
+        {
+            "featureType": "administrative.locality",
+            "elementType": "labels.text.fill",
+            "stylers": [
+                {
+                    "color": "#004074"
+                }
+            ]
+        },
+        {
+            "featureType": "administrative.locality",
+            "elementType": "labels.text.stroke",
+            "stylers": [
+                {
+                    "color": "#ffffff"
+                }
+            ]
+        },
+        {
+            "featureType": "landscape.natural",
+            "elementType": "geometry.fill",
+            "stylers": [
+                {
+                    "saturation": "58"
+                }
+            ]
+        },
+        {
+            "featureType": "landscape.natural.landcover",
+            "elementType": "labels.text.fill",
+            "stylers": [
+                {
+                    "saturation": "45"
+                }
+            ]
+        },
+        {
+            "featureType": "road.highway",
+            "elementType": "geometry.fill",
+            "stylers": [
+                {
+                    "saturation": "100"
+                },
+                {
+                    "lightness": "-43"
+                },
+                {
+                    "gamma": "2.02"
+                },
+                {
+                    "color": "#ffe700"
+                }
+            ]
+        },
+        {
+            "featureType": "road.highway",
+            "elementType": "geometry.stroke",
+            "stylers": [
+                {
+                    "color": "#ffb200"
+                }
+            ]
+        },
+        {
+            "featureType": "water",
+            "elementType": "geometry.fill",
+            "stylers": [
+                {
+                    "color": "#53c5ee"
+                }
+            ]
+        },
+        {
+            "featureType": "water",
+            "elementType": "labels.text.fill",
+            "stylers": [
+                {
+                    "visibility": "on"
+                },
+                {
+                    "color": "#ffffff"
+                }
+            ]
+        },
+        {
+            "featureType": "water",
+            "elementType": "labels.text.stroke",
+            "stylers": [
+                {
+                    "color": "#fafafa"
+                },
+                {
+                    "visibility": "on"
+                },
+                {
+                    "weight": "2.06"
+                }
+            ]
+        }
+    ];
+
+    var uluru = {
+        lat: 59.939095,
+        lng: 30.315868
+    };
+
+    var map = new google.maps.Map(mapEl, {
+        zoom: 12,
+        center: uluru,
+        styles: style
+    });
+
+
+    var locations = [
+        {lat:59.939095, lng: 30.315868},
+        {lat:59.955427, lng: 30.295793},
+        {lat:59.943803, lng: 30.367891},
+        {lat:59.924506, lng: 30.294506},
+        {lat:59.927091, lng: 30.375015}
+    ];
+
+    var markers = locations.map(function(location, i) {
+        return new google.maps.Marker({
+            position: location,
+            icon: image
+        });
+    });
+
+    var markerCluster = new MarkerClusterer(
+        map,
+        markers,
+        {
+            imagePath: 'img/m'
+        });
+
+
+    google.maps.event.addListener(map, 'mousedown', function(event){
+        this.setOptions({scrollwheel:true});
+    });
+    google.maps.event.addListener(map, 'mouseover', function(event){
+        self = this;
+        timer = setTimeout(function() {
+            self.setOptions({scrollwheel:true});
+        }, 1000);
+    });
+    google.maps.event.addListener(map, 'mouseout', function(event){
+        this.setOptions({scrollwheel:false});
+        clearTimeout(timer);
+    });
+}
+
+
+
+//============================================================================================================ подключение карты google maps//
+
+
 //=========================================================================================== menu_open//
 
 window.onload = function () { //пусть страница грузанется
@@ -214,139 +434,4 @@ jQuery(document).ready(function () {
     $(window).resize(function() {
         mobileMu();
     });
-
-    //============================================================================================================================== подключение карты google maps//
-
-    function initMap(){
-        var element = document.getElementById('contacts__map');
-        var image = 'https://codeman23.github.io/mburger/svg/map-marker.svg';
-        var options = {
-            zoom: 15,
-            center: {lat: 59.939095, lng: 30.315868}
-        };
-        var myMap= new google.maps.Map(element, options);
-
-        addMarker({lat: 59.939095, lng: 30.315868});
-        addMarker({lat: 59.931907, lng: 30.322082});
-        addMarker({lat: 59.939647, lng: 30.334245});
-
-        /*        var InfoWindow = new google.maps.InfoWindow({
-         content: '<h2>Burgers there!</h2>'
-         });
-
-         marker.addListener('click', function () {
-         InfoWindow.open(myMap, marker);
-         });*/
-
-        function addMarker(coordinates) {
-            var marker = new google.maps.Marker({
-                position: coordinates,
-                map: myMap,
-                icon: image
-            });
-        }
-
-    }
-
-    initMap();
-
-
-    /*    function initMap(){
-     var mapEl = document.getElementById('contacts__map');
-     var image = '/svg/map-marker.svg';
-     var style = [
-     {
-     "featureType": "all",
-     "elementType": "labels",
-     "stylers": [
-     {
-     "visibility": "off"
-     }
-     ]
-     },
-     {
-     "featureType": "poi.park",
-     "elementType": "geometry.fill",
-     "stylers": [
-     {
-     "color": "#00ff00"
-     }
-     ]
-     },
-     {
-     "featureType": "road.highway",
-     "elementType": "labels",
-     "stylers": [
-     {
-     "visibility": "on"
-     }
-     ]
-     },
-     {
-     "featureType": "road.arterial",
-     "elementType": "labels.text",
-     "stylers": [
-     {
-     "visibility": "on"
-     }
-     ]
-     },
-     {
-     "featureType": "road.local",
-     "elementType": "labels.text",
-     "stylers": [
-     {
-     "visibility": "on"
-     }
-     ]
-     },
-     {
-     "featureType": "water",
-     "elementType": "geometry.fill",
-     "stylers": [
-     {
-     "color": "#0099dd"
-     }
-     ]
-     }
-     ];
-     var uluru = {
-     lat: 59.939095,
-     lng: 30.315868
-     };
-
-     var map = new google.maps.Map(mapEl, {
-     zoom: 12,
-     center: uluru,
-     styles: style
-     });
-
-     var marker = new google.maps.Marker({
-     position: uluru,
-     map: map,
-     icon: image
-     });
-
-     var locations = [
-
-     {lat: -37.759859, lng: 145.128708},
-     {lat: -37.765015, lng: 145.133858},
-     {lat: -37.770104, lng: 145.143299},
-     {lat: -37.773700, lng: 145.145187},
-     {lat: -37.774785, lng: 145.137978},
-     {lat: -37.819616, lng: 144.968119},
-     {lat: -38.330766, lng: 144.695692},
-     {lat: -39.927193, lng: 175.053218},
-     {lat: -41.330162, lng: 174.865694},
-     {lat: -42.734358, lng: 147.439506},
-     {lat: -42.734358, lng: 147.501315},
-     {lat: -42.735258, lng: 147.438000},
-     {lat: -43.999792, lng: 170.463352}
-     ];
-
-
-     }
-
-     initMap();*/
-
 });
