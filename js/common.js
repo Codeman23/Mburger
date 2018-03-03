@@ -1,3 +1,18 @@
+//=========================================================================================== menu_open//
+
+window.onload = function () { //пусть страница грузанется
+    var mnu = document.querySelector(".toggle_mnu"); //выберем определенный узел по классу через queryselector
+    var hmenu = document.querySelector(".header__hidden-menu"); //cоздаем переменную для cпрятанного подменю чтоб отобразить его
+    var sandwich = document.querySelector(".sandwich"); //cоздаем переменную для cпрятанного подменю крестик!
+
+    //пишем для него событие
+
+    mnu.addEventListener('click', function () {
+        hmenu.classList.toggle("hidden_appear");
+        sandwich.classList.toggle("active");
+    });
+
+};
 
 
 jQuery(document).ready(function () {
@@ -199,4 +214,66 @@ jQuery(document).ready(function () {
     $(window).resize(function() {
         mobileMu();
     });
+
+    //============================================================================================================================== подключение карты google maps//
+
+    function initMap(){
+        var element = document.getElementById('contacts__map');
+        var image = 'https://codeman23.github.io/mburger/svg/map-marker.svg';
+        var options = {
+            zoom: 15,
+            center: {lat: 59.939095, lng: 30.315868}
+        };
+        var myMap= new google.maps.Map(element, options);
+
+        addMarker({lat: 59.939095, lng: 30.315868});
+        addMarker({lat: 59.931907, lng: 30.322082});
+        addMarker({lat: 59.939647, lng: 30.334245});
+
+
+        function addMarker(coordinates) {
+            var marker = new google.maps.Marker({
+                position: coordinates,
+                map: myMap,
+                icon: image
+            });
+        }
+
+    }
+
+    initMap();
+
+
 });
+
+
+
+
+function initMap(){
+    var element = document.getElementById('contacts__map');
+    var image = 'https://codeman23.github.io/mburger/svg/map-marker.svg';
+    var options = {
+        zoom: 15,
+        center: {lat: 59.939095, lng: 30.315868}
+    };
+    var myMap= new google.maps.Map(element, options);
+
+    addMarker({lat: 59.939095, lng: 30.315868});
+    addMarker({lat: 59.931907, lng: 30.322082});
+    addMarker({lat: 59.939647, lng: 30.334245});
+
+
+    function addMarker(coordinates) {
+        var marker = new google.maps.Marker({
+            position: coordinates,
+            map: myMap,
+            icon: image
+        });
+    }
+
+}
+
+initMap();
+
+
+//============================================================================================================ подключение карты google maps//
