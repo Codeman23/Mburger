@@ -9,6 +9,8 @@ function initMap(){
     var myMap= new google.maps.Map(element, options);
 
     addMarker({lat: 59.939095, lng: 30.315868});
+    addMarker({lat: 59.931907, lng: 30.322082});
+    addMarker({lat: 59.939647, lng: 30.334245});
 
 
     function addMarker(coordinates) {
